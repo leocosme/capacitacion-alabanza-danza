@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0a09">
+<meta name="description" content="Capacitación espiritual para Alabanza y Danza por la Salmista Savina Félix para Lluvias de Bendiciones: el misterio completo de la adoración y la danza. Juan 4:23.">
+<title>Alabanza y Danza · Lluvias de Bendiciones</title>
+<style>
+:root{
+  --bg:#0c0a09; --bg2:#13100e; --s1:#181411; --s2:#201b17; --s3:#2a241f;
+  --line:rgba(240,228,206,.09); --line2:rgba(240,228,206,.17);
+  --tx:#f4ede1; --mu:#bdb19f; --fa:#948878;
+  --gold:#d8b46f; --gold2:#eed59f; --golddk:#8c6e3c;
+  --violet:#c6a8f0; --plum:#140d1a;
+  --bronze:#e2b68b; --alert:#ec8a68;
+  --accent:var(--gold); --on-accent:#16110b;
+  --r:22px; --r-sm:14px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Noto Serif",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --heb:"SBL Hebrew","Ezra SIL","Taamey Frank CLM","David","Noto Serif Hebrew","Times New Roman",serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --st:env(safe-area-inset-top,0px); --sb:env(safe-area-inset-bottom,0px);
+  --gut:20px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg);overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.62 var(--sans);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;overflow-x:hidden;padding-bottom:calc(112px + var(--sb))}
+body.lock{overflow:hidden}
+h1,h2,h3,h4,p{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;touch-action:manipulation}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px;border-radius:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ico{width:22px;height:22px;flex:none}
+.wrap{max-width:560px;margin:0 auto;padding:0 var(--gut)}
+.serif{font-family:var(--serif)}
+
+/* ---------- Top bar + progress ---------- */
+.topbar{position:fixed;inset:0 0 auto 0;z-index:40;padding-top:var(--st);background:rgba(12,10,9,.78);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line);transform:translateY(-105%);transition:transform .45s var(--ease)}
+body.chrome .topbar{transform:none}
+.tb-in{display:flex;align-items:center;gap:12px;height:52px}
+.tb-count{font-variant-numeric:tabular-nums;font-size:13px;color:var(--fa);letter-spacing:.04em;flex:none}
+.tb-count b{color:var(--accent);font-weight:700;font-size:15px}
+.tb-title{flex:1;min-width:0;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-stage{flex:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line2);border-radius:999px;padding:4px 10px}
+.tb-bar{height:2px;background:var(--line)}
+.tb-bar span{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--golddk),var(--gold2))}
+
+/* ---------- Dock (bottom nav) ---------- */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 14px calc(12px + var(--sb));display:flex;gap:8px;justify-content:center;transform:translateY(130%);transition:transform .5s var(--ease);pointer-events:none}
+body.chrome .dock{transform:none}
+.dock>*{pointer-events:auto}
+.seg{position:relative;flex:1;max-width:440px;display:grid;grid-template-columns:repeat(3,1fr);padding:5px;border-radius:24px;background:rgba(26,22,19,.86);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border:1px solid var(--line2);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.seg-ind{position:absolute;top:5px;bottom:5px;left:0;width:0;border-radius:19px;background:var(--ind,var(--gold));opacity:0;transition:transform .45s var(--ease),width .45s var(--ease),opacity .3s,background .4s}
+.seg button{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:52px;border-radius:19px;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:var(--mu);transition:color .3s}
+.seg button .ico{width:20px;height:20px}
+.seg button[aria-current="true"]{color:var(--on-accent)}
+.seg button:active{transform:scale(.96)}
+.dock-idx{width:64px;flex:none;border-radius:24px;display:grid;place-items:center;background:rgba(26,22,19,.86);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid var(--line2);box-shadow:0 10px 30px rgba(0,0,0,.45);color:var(--tx)}
+.dock-idx:active{transform:scale(.94)}
+
+/* ---------- Cover ---------- */
+.cover{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:calc(28px + var(--st)) 0 40px;overflow:hidden;isolation:isolate}
+.cover::before{content:"";position:absolute;inset:-20% -40% auto;height:80%;background:radial-gradient(closest-side,rgba(216,180,111,.20),transparent 70%);z-index:-1}
+.cover::after{content:"";position:absolute;inset:auto -30% -30%;height:60%;background:radial-gradient(closest-side,rgba(110,60,150,.22),transparent 70%);z-index:-1}
+.cover-top{position:absolute;top:calc(20px + var(--st));left:0;right:0}
+.cover-top .wrap{display:flex;justify-content:space-between;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(216,180,111,.3);border-radius:999px;padding:7px 13px}
+.cover-mark{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);text-align:right}
+.byline{margin:-4px 0 20px;font-size:15px;color:var(--mu)}
+.byline strong{color:var(--gold2);font-weight:600}
+.byline span{display:block;margin-top:4px;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--fa)}
+.cover-art{width:min(78vw,340px);margin:44px auto 6px;display:block}
+.cover-art .flame{transform-origin:160px 205px;animation:flick 3.2s ease-in-out infinite}
+.cover-art .rib{stroke-dasharray:6 10;animation:dash 14s linear infinite}
+.cover-art .ring{transform-origin:160px 160px;animation:breathe 6s ease-in-out infinite}
+.cover-art .ring:nth-of-type(2){animation-delay:1s}.cover-art .ring:nth-of-type(3){animation-delay:2s}
+@keyframes flick{0%,100%{transform:scale(1,1)}40%{transform:scale(.96,1.05)}70%{transform:scale(1.03,.97)}}
+@keyframes dash{to{stroke-dashoffset:-320}}
+@keyframes breathe{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.9;transform:scale(1.025)}}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.cover h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,11vw,60px);line-height:1.02;letter-spacing:-.01em;margin:12px 0 18px}
+.cover h1 em{font-style:italic;color:var(--gold2)}
+.theme-box{border-top:1px solid var(--line2);padding-top:16px;margin-bottom:18px}
+.theme-box small{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--fa);margin-bottom:6px}
+.theme-box p{font-family:var(--serif);font-size:21px;line-height:1.3;font-style:italic;color:var(--tx)}
+.cover blockquote{margin:0 0 26px;color:var(--mu);font-size:15px;line-height:1.55}
+.cover blockquote cite{display:block;font-style:normal;font-size:12px;letter-spacing:.14em;color:var(--gold);margin-top:6px;font-weight:600}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:58px;border-radius:18px;background:linear-gradient(180deg,var(--gold2),var(--gold));color:var(--on-accent);font-weight:700;font-size:14.5px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 10px 28px rgba(216,180,111,.22),inset 0 1px 0 rgba(255,255,255,.4);transition:transform .2s var(--ease),box-shadow .3s}
+.btn:active{transform:scale(.975);box-shadow:0 4px 14px rgba(216,180,111,.2)}
+.btn.ghost{background:transparent;color:var(--tx);border:1px solid var(--line2);box-shadow:none}
+.scroll-hint{display:flex;justify-content:center;margin-top:20px;color:var(--fa)}
+.scroll-hint .ico{animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+
+/* ---------- Sections ---------- */
+section{scroll-margin-top:calc(60px + var(--st))}
+.block{padding:68px 0 8px}
+.part{position:relative}
+.part[data-area="alabanza"]{--accent:var(--gold)}
+.part[data-area="danza"]{--accent:var(--violet);--on-accent:#170f20;background:linear-gradient(180deg,var(--bg) 0,var(--plum) 380px,var(--plum) calc(100% - 300px),var(--bg) 100%)}
+.part[data-area="vestuario"]{--accent:var(--bronze)}
+.part[data-area="fin"]{--accent:var(--gold)}
+
+.part-intro{position:relative;padding:96px 0 40px;text-align:left;overflow:hidden}
+.part-intro .numeral{position:absolute;right:-6px;top:30px;font-family:var(--serif);font-size:200px;line-height:1;color:var(--accent);opacity:.07;pointer-events:none}
+.part-icon{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);margin-bottom:22px}
+.part-icon .ico{width:30px;height:30px}
+.part-intro h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,10vw,54px);line-height:1.04;margin:10px 0 14px}
+.part-intro .lede{font-size:17.5px;color:var(--mu);max-width:30ch}
+.part-intro .lede.q{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.38;color:var(--tx);max-width:none}
+.toc{margin-top:28px;display:grid;gap:8px}
+.toc button{display:flex;align-items:center;gap:14px;min-height:54px;padding:10px 16px;border-radius:16px;background:var(--s1);border:1px solid var(--line);text-align:left;transition:background .25s,transform .2s}
+.toc button:active{transform:scale(.985);background:var(--s2)}
+.toc b{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--accent);min-width:26px}
+.toc span{flex:1;font-size:15px;font-weight:600}
+.toc .ico{width:18px;height:18px;color:var(--fa)}
+
+.ch-head{margin-bottom:26px}
+.ch-meta{display:flex;align-items:center;gap:10px;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.ch-meta::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 40%,transparent),transparent)}
+.ch-meta i{font-style:normal;color:var(--fa);font-weight:600}
+.ch-head h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,8.4vw,42px);line-height:1.08;margin:12px 0 10px;letter-spacing:-.005em}
+.ch-head p{color:var(--mu);font-size:16px}
+
+/* ---------- Cards ---------- */
+.card{background:var(--s1);border:1px solid var(--line);border-radius:var(--r)}
+.stack{display:grid;gap:12px;align-items:start}
+.ref{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:color-mix(in srgb,var(--accent) 11%,transparent);border-radius:999px;padding:7px 12px;line-height:1}
+.ref .ico{width:14px;height:14px}
+.refs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+/* Citas bíblicas desplegables */
+.ref[data-ref]{position:relative;min-height:36px;padding:9px 12px 9px 13px;transition:background .25s,color .25s}
+.ref[data-ref]::after,.vref::after,.chip[data-ref]::after{content:"";position:absolute;inset:-5px -3px}
+.ref[data-ref] .ico:last-child{width:12px;height:12px;margin-left:-1px;opacity:.8;transition:transform .35s var(--ease)}
+.ref[data-ref]:active{transform:scale(.96)}
+.ref[aria-expanded="true"]{background:var(--accent);color:var(--on-accent)}
+.ref[aria-expanded="true"] .ico:last-child{transform:rotate(180deg)}
+.vref{position:relative;display:inline;font-weight:650;color:var(--accent);text-decoration:underline dotted;text-decoration-thickness:1.5px;text-underline-offset:3px;white-space:nowrap;letter-spacing:inherit}
+.vref[aria-expanded="true"]{text-decoration-style:solid}
+.chip[data-ref]{position:relative;min-height:40px}
+.chip[data-ref]:active{transform:scale(.96)}
+.verse{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s var(--ease)}
+.verse.open{grid-template-rows:1fr}
+.verse>div{overflow:hidden;min-height:0}
+.verse-in{margin-top:12px;padding:16px 18px 14px;border-radius:16px;background:color-mix(in srgb,var(--accent) 7%,var(--s2));border:1px solid color-mix(in srgb,var(--accent) 24%,transparent);text-align:left;opacity:0;transform:translateY(-6px);transition:opacity .35s .08s,transform .4s var(--ease)}
+.verse.open .verse-in{opacity:1;transform:none}
+.verse .v-text,.sheet .v-text{font-family:var(--serif);font-size:17px;line-height:1.55;color:var(--tx);font-style:normal}
+.verse .v-text sup{font-family:var(--sans);font-size:11px;font-weight:700;color:var(--accent);margin-right:3px;vertical-align:super;line-height:0}
+.verse .v-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;margin-top:10px;font-family:var(--sans);font-size:10.5px;line-height:1.4;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}
+.verse .v-foot span{white-space:nowrap}
+.verse .v-foot span:first-child{color:var(--accent)}
+
+.hero-card{padding:24px 22px;position:relative;overflow:hidden}
+.hero-card::before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 22%,transparent),transparent)}
+.hero-card .def{position:relative;font-family:var(--serif);font-size:21.5px;line-height:1.42}
+.hero-card .def strong{color:var(--gold2);font-weight:400}
+.pull{margin:20px 0 0;padding:18px;border-radius:16px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 16%,transparent),color-mix(in srgb,var(--accent) 4%,transparent));border:1px solid color-mix(in srgb,var(--accent) 24%,transparent);font-size:16.5px;font-weight:600;line-height:1.45}
+.more-btn{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:52px;margin-top:18px;padding:0 6px 0 18px;border-radius:16px;border:1px solid var(--line2);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);transition:background .25s}
+.more-btn:active{background:var(--s2)}
+.more-btn .chev{width:40px;height:40px}
+.more-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.collapse{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.collapse.open{grid-template-rows:1fr}
+.collapse>div{overflow:hidden;min-height:0}
+.layers{display:grid;gap:10px;padding-top:18px}
+.layer{display:flex;gap:14px;padding:14px;border-radius:16px;background:var(--s2);border:1px solid var(--line)}
+.layer b{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:12px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-family:var(--serif);font-weight:400;font-size:18px}
+.layer h4{font-size:15.5px;margin-bottom:2px}
+.layer p{font-size:14.5px;color:var(--mu);line-height:1.5}
+.note{margin-top:14px;font-size:15px;color:var(--mu)}
+
+/* Accordion */
+.acc{background:var(--s1);border:1px solid var(--line);border-radius:var(--r);transition:border-color .35s,background .35s}
+.acc.open{border-color:color-mix(in srgb,var(--accent) 38%,transparent);background:var(--s2)}
+.acc-btn{display:flex;align-items:center;gap:14px;width:100%;min-height:68px;padding:16px 14px 16px 18px;text-align:left;border-radius:var(--r)}
+.acc-btn:active .acc-head{opacity:.75}
+.acc-num{flex:none;font-family:var(--serif);font-size:24px;line-height:1;color:var(--accent);min-width:32px}
+.acc-ico{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent)}
+.acc-head{flex:1;min-width:0}
+.acc-title{display:block;font-weight:650;font-size:16.5px;line-height:1.3}
+.acc-lead{display:block;color:var(--mu);font-size:14.5px;line-height:1.45;margin-top:4px}
+.acc-orig{font-family:var(--heb);font-size:22px;color:var(--accent);margin-right:8px;font-weight:400}
+.chev{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line2);color:var(--mu);transition:transform .4s var(--ease),background .3s,color .3s,border-color .3s}
+.chev .ico{width:18px;height:18px}
+.acc.open .chev{transform:rotate(180deg);background:var(--accent);color:var(--on-accent);border-color:transparent}
+.acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s var(--ease)}
+.acc.open .acc-panel{grid-template-rows:1fr}
+.acc-panel>div{overflow:hidden;min-height:0}
+.acc-body{padding:2px 18px 20px;color:var(--mu);font-size:15.5px}
+.acc-body p+p{margin-top:10px}
+.acc-body strong{color:var(--tx);font-weight:600}
+.apply{margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--s3);border:1px solid var(--line);color:var(--tx);font-size:14.5px;line-height:1.5}
+.apply small{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+
+/* Numbered reason cards */
+.num-card{position:relative;padding:22px 20px 20px;overflow:hidden}
+.num-card .big{position:absolute;right:14px;top:6px;font-family:var(--serif);font-size:74px;line-height:1;color:var(--accent);opacity:.12}
+.num-card h4{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.num-card p.main{font-family:var(--serif);font-size:20px;line-height:1.36;max-width:24ch;position:relative}
+
+/* Carousel */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 calc(var(--gut) * -1);padding:4px var(--gut) 8px;scroll-padding:0 var(--gut);overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.rail>*{flex:0 0 80%;scroll-snap-align:start}
+.rail-ctl{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
+.rail-count{font-variant-numeric:tabular-nums;font-size:13px;color:var(--fa);letter-spacing:.08em}
+.rail-count b{color:var(--accent);font-size:15px}
+.rail-dots{display:flex;gap:6px;flex:1;justify-content:center}
+.rail-dots i{width:6px;height:6px;border-radius:3px;background:var(--line2);transition:width .35s var(--ease),background .3s}
+.rail-dots i.on{width:20px;background:var(--accent)}
+.rail-arrows{display:flex;gap:8px}
+.icon-btn{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line2);color:var(--tx);transition:background .2s,transform .2s,opacity .2s}
+.icon-btn:active{transform:scale(.92);background:var(--s2)}
+.icon-btn[disabled]{opacity:.3;pointer-events:none}
+
+.heb{display:flex;flex-direction:column;text-align:left;padding:20px;min-height:340px;border-radius:var(--r);background:linear-gradient(170deg,var(--s2),var(--s1) 60%);border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .25s var(--ease),border-color .3s}
+.heb:active{transform:scale(.98);border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+.heb .top{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--fa)}
+.heb .top em{font-style:normal;color:var(--accent)}
+.heb .script{display:block;font-family:var(--heb);font-size:64px;line-height:1.15;color:var(--gold2);margin:22px 0 10px;direction:rtl;text-align:right}
+.heb .tr{display:block;font-size:22px;font-weight:700;letter-spacing:.14em}
+.heb .mean{display:block;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--accent);margin:4px 0 10px}
+.heb .desc{display:block;color:var(--mu);font-size:15px;line-height:1.5;flex:1}
+.heb .foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.heb .open{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx)}
+.heb .open .ico{width:16px;height:16px}
+.heb.lead{background:linear-gradient(170deg,#2a2012,var(--s1) 70%);border-color:rgba(216,180,111,.28)}
+
+/* Tabs */
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--gut) * -1) 16px;padding:2px var(--gut)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid var(--line2);font-size:14.5px;font-weight:600;color:var(--mu);white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
+.tab small{font-size:12px;color:var(--fa);font-weight:600}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--on-accent);border-color:transparent}
+.tab[aria-selected="true"] small{color:var(--on-accent);opacity:.7}
+.tab:active{transform:scale(.97)}
+.tabs.split{display:grid;grid-template-columns:1fr 1fr;padding:5px;margin:0 0 16px;border-radius:20px;background:var(--s1);border:1px solid var(--line);gap:4px}
+.tabs.split .tab{justify-content:center;border:0;border-radius:15px;min-height:48px}
+[role="tabpanel"].fade{animation:fadeUp .4s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.lang-note{font-size:14.5px;color:var(--mu);margin:0 0 14px;padding:12px 16px;border-radius:var(--r-sm);background:var(--s1);border:1px solid var(--line)}
+
+/* Dimension selector */
+.dims{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:14px}
+.dim{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:76px;padding:8px 2px;border-radius:16px;border:1px solid var(--line);background:var(--s1);color:var(--mu);font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;line-height:1.15;text-align:center;transition:all .3s var(--ease)}
+.dim .ico{width:24px;height:24px}
+.dim[aria-selected="true"]{background:color-mix(in srgb,var(--dc) 18%,var(--s1));border-color:color-mix(in srgb,var(--dc) 55%,transparent);color:var(--tx)}
+.dim[aria-selected="true"] .ico{color:var(--dc);transform:translateY(-2px) scale(1.08)}
+.dim .ico{transition:transform .4s var(--ease)}
+.dim-panel{padding:24px 20px;position:relative;overflow:hidden}
+.dim-panel::before{content:"";position:absolute;inset:-40% -30% auto auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--dc) 28%,transparent),transparent)}
+.dim-panel .badge{position:relative;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;color:var(--dc);background:color-mix(in srgb,var(--dc) 15%,transparent);margin-bottom:16px}
+.dim-panel .badge .ico{width:28px;height:28px}
+.dim-panel h4{position:relative;font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.15;margin-bottom:10px}
+.dim-panel .d{position:relative;font-size:17px;line-height:1.5}
+.dim-panel .x{position:relative;color:var(--mu);font-size:15.5px;margin-top:12px}
+.dim-panel{--accent:var(--dc)}
+
+/* Movement grid */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mv{display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:18px 16px 16px;min-height:188px;border-radius:var(--r);background:var(--s1);border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .25s var(--ease),border-color .3s}
+.mv:active{transform:scale(.97);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.mv .fig{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);margin-bottom:14px}
+.mv .fig .ico{width:32px;height:32px;stroke-width:1.5}
+.mv:hover .fig .ico,.mv:focus-visible .fig .ico{animation:wiggle .6s var(--ease)}
+@keyframes wiggle{30%{transform:rotate(-8deg) scale(1.06)}60%{transform:rotate(5deg)}}
+.mv .nm{display:block;font-weight:700;font-size:15.5px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2}
+.mv .hb{display:block;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent);margin:3px 0 8px}
+.mv .mn{display:block;font-size:13.5px;color:var(--mu);line-height:1.42;flex:1}
+.mv .rf{display:block;margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}
+.mv .plus{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line2);color:var(--mu)}
+.mv .plus .ico{width:16px;height:16px}
+
+/* Colors */
+.colors-sec{position:relative;overflow:hidden}
+.colors-sec::before{content:"";position:absolute;left:50%;top:120px;width:520px;height:520px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,var(--tint,rgba(216,180,111,.14)),transparent);transition:background 1s;pointer-events:none;z-index:0}
+.colors-sec>*{position:relative;z-index:1}
+.spectrum{display:flex;height:64px;border-radius:18px;overflow:hidden;margin-bottom:18px;border:1px solid var(--line)}
+.spectrum span{flex:1;transition:flex .5s var(--ease)}
+.spectrum span.on{flex:3.2}
+.colors{display:grid;gap:10px}
+.clr{display:flex;align-items:center;gap:16px;width:100%;min-height:84px;padding:14px 14px 14px 14px;border-radius:20px;background:var(--s1);border:1px solid var(--line);text-align:left;transition:transform .25s var(--ease),border-color .3s,background .3s}
+.clr:active{transform:scale(.98)}
+.clr .sw{flex:none;width:56px;height:56px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 6px 18px -6px var(--glow,rgba(0,0,0,.6))}
+.clr .ct{flex:1;min-width:0}
+.clr .cn{display:block;font-weight:700;font-size:16px;line-height:1.25}
+.clr .cm{display:block;font-size:14px;color:var(--mu);line-height:1.4;margin-top:3px}
+.clr .cr{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);margin-top:6px}
+.clr .chev{width:32px;height:32px;transform:rotate(-90deg)}
+
+/* Errors */
+.alert-sec{--accent:var(--alert);--on-accent:#1c0f0a}
+.alert-banner{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:var(--r);background:linear-gradient(135deg,rgba(236,138,104,.14),rgba(236,138,104,.03));border:1px solid rgba(236,138,104,.3);margin-bottom:14px}
+.alert-banner .ico{width:28px;height:28px;color:var(--alert);flex:none;margin-top:2px}
+.alert-banner p{font-size:15px;color:var(--mu)}
+.alert-banner strong{display:block;color:var(--tx);font-size:16px;margin-bottom:2px}
+.altar-quote{margin:22px 0 0;padding:34px 24px;text-align:center;border-radius:var(--r);background:radial-gradient(120% 90% at 50% 0%,rgba(216,180,111,.16),transparent 70%),var(--s1);border:1px solid rgba(216,180,111,.22)}
+.altar-quote .ico{width:30px;height:30px;color:var(--gold);margin-bottom:12px}
+.altar-quote p{font-family:var(--serif);font-size:25px;line-height:1.3}
+.altar-quote p span{display:block;color:var(--gold2);font-style:italic}
+
+/* Garments */
+.garm{padding:22px 20px;display:flex;flex-direction:column;gap:10px}
+.garm-top{display:flex;align-items:center;gap:14px}
+.garm .fig{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;flex:none;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.garm .fig .ico{width:32px;height:32px;stroke-width:1.4}
+.garm h4{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1}
+.garm .mat{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.garm p{color:var(--mu);font-size:15.5px}
+.sub-h{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--fa);margin:40px 0 14px}
+.sub-h b{color:var(--accent);font-weight:700}
+
+/* Intro card */
+.how{padding:22px 20px}
+.how h3{font-family:var(--serif);font-weight:400;font-size:26px;margin-bottom:6px}
+.how > p{color:var(--mu);font-size:15px;margin-bottom:18px}
+.path{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.path::before{content:"";position:absolute;left:15px;top:16px;bottom:16px;width:1px;background:linear-gradient(var(--gold),rgba(216,180,111,.08))}
+.path li{display:flex;gap:14px;align-items:center;min-height:52px;position:relative}
+.path li i{width:31px;height:31px;border-radius:50%;flex:none;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:700;background:var(--bg);border:1px solid rgba(216,180,111,.45);color:var(--gold)}
+.path li b{font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.path li span{display:block;font-size:13.5px;color:var(--fa);letter-spacing:0;text-transform:none;font-weight:400}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.tips div{padding:12px 8px;border-radius:14px;background:var(--s2);border:1px solid var(--line);text-align:center;font-size:12.5px;color:var(--mu);line-height:1.3}
+.tips .ico{display:block;margin:0 auto 6px;color:var(--gold);width:20px;height:20px}
+
+/* Conclusion */
+.final{padding:96px 0 40px;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;left:50%;top:40px;width:560px;height:560px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(216,180,111,.16),transparent);pointer-events:none}
+.final>*{position:relative}
+.final h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,11vw,62px);line-height:1;margin:14px 0 16px}
+.final .lede{font-size:19px;font-family:var(--serif);font-style:italic;color:var(--mu);max-width:26ch;margin:0 auto}
+.eq{list-style:none;padding:0;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:36px auto 8px;max-width:420px}
+.eq li{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:92px;padding:12px 4px;border-radius:18px;border:1px solid var(--line);background:var(--s1);font-size:13px;font-weight:600;letter-spacing:.01em}
+.eq li .ico{width:24px;height:24px;color:var(--gold)}
+.eq li:nth-child(3) .ico{color:var(--violet)}.eq li:nth-child(4) .ico{color:var(--bronze)}
+.eq li::before,.eq::after{content:"+";position:absolute;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:var(--bg);color:var(--gold);font-size:14px;font-weight:600;line-height:1}
+.eq li::before{left:-16px;top:50%;transform:translateY(-50%)}
+.eq li:nth-child(3n+1)::before{display:none}
+.eq::after{left:50%;top:50%;transform:translate(-50%,-50%)}
+.eq-eq{font-family:var(--serif);font-size:40px;color:var(--gold);line-height:1;margin:14px 0 6px}
+.one-altar{font-family:var(--serif);font-size:clamp(36px,10vw,56px);line-height:1;color:var(--gold2);letter-spacing:.02em;margin-bottom:26px}
+.one-altar small{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--fa);margin-bottom:10px}
+.final-art{width:120px;margin:0 auto 8px;display:block}
+.final-art .flame{transform-origin:60px 70px;animation:flick 3.2s ease-in-out infinite}
+.closing{margin:26px auto 32px;padding:26px 22px;border-radius:var(--r);background:var(--s1);border:1px solid var(--line);font-family:var(--serif);font-size:19.5px;line-height:1.5;text-align:left}
+.closing::before{content:"\201C";display:block;font-size:56px;line-height:.6;color:var(--gold);margin-bottom:8px}
+.foot-meta{margin-top:30px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--fa)}
+
+/* ---------- Bottom sheet ---------- */
+.sheet-bg{position:fixed;inset:0;z-index:60;background:rgba(5,4,3,.62);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;transition:opacity .35s}
+.sheet-bg.show{opacity:1}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:61;max-width:640px;margin:0 auto;max-height:90vh;max-height:90svh;display:flex;flex-direction:column;background:var(--s1);border:1px solid var(--line2);border-bottom:0;border-radius:28px 28px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.5);transform:translateY(105%);transition:transform .45s var(--ease);--accent:var(--gold)}
+.sheet.show{transform:none}
+.sheet.drag{transition:none}
+.sheet-grip{flex:none;height:30px;display:grid;place-items:center;cursor:grab;touch-action:none}
+.sheet-grip span{width:44px;height:5px;border-radius:3px;background:var(--line2)}
+.sheet-x{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--s2);border:1px solid var(--line);z-index:2}
+.sheet-scroll{overflow-y:auto;overscroll-behavior:contain;padding:4px 22px calc(28px + var(--sb))}
+.sh-hero{height:150px;margin:6px -6px 20px;border-radius:20px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px 18px}
+.sh-hero .sh-hex{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.sh-fig{width:72px;height:72px;border-radius:22px;display:grid;place-items:center;color:var(--accent);background:color-mix(in srgb,var(--accent) 13%,transparent);margin:4px 0 18px}
+.sh-fig .ico{width:40px;height:40px;stroke-width:1.4}
+.sh-kicker{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;padding-right:50px}
+.sheet h2{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.1;margin-bottom:6px;padding-right:44px}
+.sh-script{font-family:var(--heb);font-size:46px;line-height:1.2;color:var(--gold2);margin:6px 0 4px;text-align:left}
+.sh-sub{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--accent);margin-bottom:14px}
+.sh-lead{font-size:17px;line-height:1.5;margin-bottom:12px}
+.sh-body{color:var(--mu);font-size:15.5px}
+.sh-body p+p{margin-top:10px}
+.sh-list{display:grid;gap:8px;margin-top:4px}
+.sh-list button{display:flex;align-items:center;gap:14px;min-height:56px;padding:8px 14px;border-radius:16px;background:var(--s2);border:1px solid var(--line);text-align:left;transition:background .2s}
+.sh-list button:active{background:var(--s3)}
+.sh-list b{font-family:var(--serif);font-weight:400;font-size:19px;min-width:28px;color:var(--c,var(--gold))}
+.sh-list span{flex:1;font-weight:600;font-size:15px}
+.sh-list small{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fa)}
+.sh-group{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--fa);margin:18px 0 8px}
+.sh-group:first-child{margin-top:4px}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:370px){
+  :root{--gut:16px}
+  .dims{gap:4px}.dim{font-size:9.5px;min-height:72px}
+  .mv{padding:16px 13px 14px}
+  .tips div{font-size:11.5px}
+}
+@media (min-width:720px){
+  .wrap{max-width:760px}
+  .rail>*{flex-basis:44%}
+  .stack.g2{grid-template-columns:1fr 1fr}
+  .grid2{grid-template-columns:repeat(3,1fr)}
+  .colors{grid-template-columns:1fr 1fr}
+  .dims{gap:10px}.dim{font-size:11.5px;min-height:88px}
+  .part-intro{padding-top:120px}
+  .toc{grid-template-columns:1fr 1fr}
+  .eq{grid-template-columns:repeat(6,1fr);max-width:720px}
+  .eq::after{display:none}
+  .eq li:nth-child(4)::before{display:grid}
+  .cover-art{width:360px}
+}
+@media (min-width:1080px){
+  .wrap{max-width:1040px}
+  .rail>*{flex-basis:31%}
+  .stack.g3{grid-template-columns:repeat(3,1fr)}
+  .stack.g2.g4{grid-template-columns:repeat(4,1fr)}
+  .colors{grid-template-columns:repeat(3,1fr)}
+  .cover .wrap.cover-body{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+  .cover-art{width:100%;max-width:440px;margin:0;order:2}
+  .hero-card,.dim-wrap,.final .wrap{max-width:760px}
+  .hero-card{margin:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#intro">Saltar al contenido</a>
+
+<header class="topbar" id="topbar">
+  <div class="wrap tb-in">
+    <span class="tb-count" aria-live="polite"><b id="tbNum">01</b> / <span id="tbTot">11</span></span>
+    <span class="tb-title" id="tbTitle">Antes de empezar</span>
+    <span class="tb-stage" id="tbStage">Inicio</span>
+  </div>
+  <div class="tb-bar" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="tbBar"><span id="tbFill"></span></div>
+</header>
+
+<main>
+<!-- ========== PORTADA ========== -->
+<section class="cover" id="inicio" aria-label="Portada">
+  <div class="cover-top"><div class="wrap"><button class="chip" data-ref="Juan 4:23" aria-haspopup="dialog" aria-label="Leer Juan 4:23"><span data-i="book"></span>Juan 4:23</button><span class="cover-mark">Lluvias de Bendiciones</span></div></div>
+  <div class="wrap cover-body">
+    <svg class="cover-art" viewBox="0 0 320 300" aria-hidden="true">
+      <defs>
+        <radialGradient id="cg" cx="50%" cy="62%" r="50%"><stop offset="0" stop-color="#eed59f" stop-opacity=".55"/><stop offset=".5" stop-color="#d8b46f" stop-opacity=".12"/><stop offset="1" stop-color="#d8b46f" stop-opacity="0"/></radialGradient>
+        <linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e3863f"/><stop offset=".55" stop-color="#eec46f"/><stop offset="1" stop-color="#fff3d2"/></linearGradient>
+        <linearGradient id="rb" x1="0" x2="1"><stop offset="0" stop-color="#c6a8f0" stop-opacity="0"/><stop offset=".45" stop-color="#c6a8f0"/><stop offset="1" stop-color="#d8b46f" stop-opacity=".2"/></linearGradient>
+        <linearGradient id="gs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eed59f"/><stop offset="1" stop-color="#8c6e3c"/></linearGradient>
+      </defs>
+      <circle cx="160" cy="180" r="118" fill="url(#cg)"/>
+      <g fill="none" stroke="#d8b46f">
+        <circle class="ring" cx="160" cy="160" r="86" stroke-opacity=".22" stroke-dasharray="2 6"/>
+        <circle class="ring" cx="160" cy="160" r="112" stroke-opacity=".14" stroke-dasharray="2 8"/>
+        <circle class="ring" cx="160" cy="160" r="138" stroke-opacity=".08" stroke-dasharray="2 10"/>
+      </g>
+      <g stroke="#eed59f" stroke-opacity=".35" stroke-linecap="round">
+        <path d="M160 98v-22M126 110l-12-16M194 110l12-16M106 138l-20-8M214 138l20-8"/>
+      </g>
+      <path d="M96 250V156a64 64 0 0 1 128 0v94" fill="none" stroke="url(#gs)" stroke-width="1.4"/>
+      <path d="M110 250V160a50 50 0 0 1 100 0v90" fill="none" stroke="#d8b46f" stroke-opacity=".3"/>
+      <path class="flame" d="M160 142c13 17 22 30 18 46-3 12-11 18-18 18s-15-6-18-18c-3-13 5-24 11-33 1 9 4 13 8 15 1-10-3-18-1-28z" fill="url(#fl)"/>
+      <path d="M160 176c5 7 7 12 5 18-1 4-3 6-5 6s-4-2-5-6c-1-5 2-10 5-18z" fill="#fff6dc" opacity=".8"/>
+      <rect x="122" y="206" width="76" height="9" rx="2" fill="#d8b46f"/>
+      <path d="M122 206v-7M198 206v-7" stroke="#d8b46f" stroke-width="4" stroke-linecap="round"/>
+      <rect x="132" y="215" width="56" height="35" rx="1.5" fill="none" stroke="#d8b46f" stroke-opacity=".7"/>
+      <path d="M68 250h184M52 262h216M36 274h248" stroke="#d8b46f" stroke-linecap="round" stroke-opacity=".5"/>
+      <path class="rib" d="M14 214C78 146 118 268 182 222S272 112 308 150" fill="none" stroke="url(#rb)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M20 232C84 176 124 284 188 240S276 140 304 168" fill="none" stroke="#c6a8f0" stroke-opacity=".18" stroke-linecap="round"/>
+      <g fill="#eed59f" fill-opacity=".7"><circle cx="242" cy="70" r="1.6"/><circle cx="78" cy="84" r="1.2"/><circle cx="268" cy="118" r="1"/><circle cx="52" cy="128" r="1.4"/></g>
+      <g fill="none" stroke="#d8b46f" stroke-opacity=".55" stroke-width="1.2"><path d="M246 182v-20l12-3v18"/><circle cx="243" cy="183" r="3"/><circle cx="255" cy="178" r="3"/></g>
+    </svg>
+    <div>
+      <p class="eyebrow">Capacitación espiritual</p>
+      <h1>Para <em>Alabanza</em><br>y <em>Danza</em></h1>
+      <p class="byline">Por la Salmista <strong>Savina Félix</strong><span>Para Lluvias de Bendiciones</span></p>
+      <div class="theme-box">
+        <small>Tema</small>
+        <p>“El misterio completo de la adoración y la danza”</p>
+      </div>
+      <blockquote>“Los verdaderos adoradores adorarán al Padre en espíritu y en verdad.”<cite><button class="vref" data-ref="Juan 4:23" aria-expanded="false">JUAN 4:23</button></cite></blockquote>
+      <button class="btn" id="startBtn">Comenzar capacitación <span data-i="arrowR"></span></button>
+      <div class="scroll-hint" aria-hidden="true"><span data-i="chev"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ANTES DE EMPEZAR ========== -->
+<section class="block" id="intro" aria-label="Antes de empezar">
+  <div class="wrap">
+    <div class="card how rv">
+      <p class="eyebrow">Antes de empezar</p>
+      <h3>Tu recorrido</h3>
+      <p>Once capítulos breves. Avanza a tu ritmo y vuelve a cualquier tema desde la barra inferior. Toca cualquier cita bíblica para leer el versículo completo.</p>
+      <ol class="path">
+        <li><i>1</i><b>Descubrir<span>Qué es la adoración y para qué sirve</span></b></li>
+        <li><i>2</i><b>Comprender<span>Las palabras, raíces, dimensiones y razones</span></b></li>
+        <li><i>3</i><b>Explorar<span>Movimientos de la danza y colores del altar</span></b></li>
+        <li><i>4</i><b>Aplicar<span>Errores a evitar y vestuario sacerdotal</span></b></li>
+        <li><i>5</i><b>Reflexionar<span>El altar sincronizado</span></b></li>
+      </ol>
+      <div class="tips">
+        <div><span data-i="tap"></span>Toca las tarjetas</div>
+        <div><span data-i="swipe"></span>Desliza los carruseles</div>
+        <div><span data-i="grid"></span>Usa el índice</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTE I — ALABANZA ================= -->
+<div class="part" data-area="alabanza" id="alabanza">
+  <section class="part-intro" aria-labelledby="p1t">
+    <span class="numeral" aria-hidden="true">I</span>
+    <div class="wrap">
+      <div class="part-icon rv"><span data-i="music"></span></div>
+      <p class="eyebrow rv">Sección I</p>
+      <h2 id="p1t" class="rv">Alabanza y<br>Adoración</h2>
+      <p class="lede rv">Entender la adoración antes de ministrar.</p>
+      <div class="toc" data-toc="alabanza"></div>
+    </div>
+  </section>
+
+  <!-- C1 -->
+  <section class="block chapter" id="c1" data-title="¿Qué es la adoración?" data-stage="Descubrir">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 01 <i>· Descubrir</i></p><h3>¿Qué es la adoración?</h3></header>
+      <article class="card hero-card rv">
+        <p class="def">Es la <strong>respuesta del ser humano</strong> ante la revelación de la santidad, el carácter y la soberanía de Dios; una <strong>rendición voluntaria</strong> del espíritu, alma y cuerpo.</p>
+        <div class="refs"><button class="ref" data-ref="Romanos 12:1" aria-expanded="false"><span data-i="book"></span>Romanos 12:1<span data-i="chev"></span></button></div>
+        <p class="pull">La adoración no es un género musical, sino una postura interna de sumisión absoluta.</p>
+        <button class="more-btn" aria-expanded="false" aria-controls="c1more" data-more data-open="Ver concepto completo" data-close="Ocultar concepto"><span>Ver concepto completo</span><span class="chev"><span data-i="chev"></span></span></button>
+        <div class="collapse" id="c1more" inert><div>
+          <div class="layers">
+            <div class="layer"><b>1</b><div><h4>Revelación</h4><p>La adoración comienza cuando Dios se revela. Al contemplar Su santidad, Su carácter y Su soberanía, el corazón no puede quedar igual: responde.</p></div></div>
+            <div class="layer"><b>2</b><div><h4>Espíritu</h4><p>Comunión y reverencia. El espíritu humano se conecta con el Espíritu de Dios y reconoce quién es Él.</p></div></div>
+            <div class="layer"><b>3</b><div><h4>Alma</h4><p>Voluntad, emociones y pensamientos se alinean. No es solo sentir: es decidir rendirse.</p></div></div>
+            <div class="layer"><b>4</b><div><h4>Cuerpo</h4><p>Presentado como sacrificio vivo, santo y agradable a Dios (Romanos 12:1). Por eso cantar, tocar y danzar pueden ser adoración.</p></div></div>
+          </div>
+          <p class="note">No depende del ritmo, del estilo ni del volumen; depende de la rendición del corazón. Una canción lenta no es más adoración que una rápida: lo que la hace adoración es la postura de quien la ofrece.</p>
+        </div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- C2 -->
+  <section class="block chapter" id="c2" data-title="¿Para qué sirve la adoración?" data-stage="Descubrir">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 02 <i>· Descubrir</i></p><h3>¿Para qué sirve la adoración?</h3><p>Cuatro efectos de una adoración genuina. Toca cada tarjeta para leer la explicación completa.</p></header>
+      <div class="stack g2" id="purpose"></div>
+    </div>
+  </section>
+
+  <!-- C3 -->
+  <section class="block chapter" id="c3" data-title="Las expresiones hebreas" data-stage="Comprender">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 03 <i>· Comprender</i></p><h3>Las 7 expresiones hebreas de la adoración</h3><p>Siete expresiones de alabanza y una postura que las abarca a todas: <em>Shachah</em>. Desliza y toca para ampliar.</p></header>
+      <div class="rail rv" id="hebRail" aria-label="Expresiones hebreas" tabindex="0"></div>
+      <div class="rail-ctl" data-ctl="hebRail">
+        <span class="rail-count"><b>01</b> / 08</span>
+        <span class="rail-dots" aria-hidden="true"></span>
+        <span class="rail-arrows"><button class="icon-btn" data-dir="-1" aria-label="Anterior"><span data-i="arrowL"></span></button><button class="icon-btn" data-dir="1" aria-label="Siguiente"><span data-i="arrowR"></span></button></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- C4 -->
+  <section class="block chapter" id="c4" data-title="Raíces bíblicas de la adoración" data-stage="Comprender">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 04 <i>· Comprender</i></p><h3>Raíces bíblicas de la adoración</h3><p>Cuatro idiomas, una misma respuesta: rendirse ante Dios.</p></header>
+      <div class="rv">
+        <div class="tabs" role="tablist" aria-label="Idiomas" id="langTabs"></div>
+        <div id="langPanels"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C5 -->
+  <section class="block chapter" id="c5" data-title="Dimensiones y tipos de adoración" data-stage="Comprender">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 05 <i>· Comprender</i></p><h3>Dimensiones y tipos de adoración</h3><p>Selecciona una dimensión.</p></header>
+      <div class="dim-wrap rv">
+        <div class="dims" role="tablist" aria-label="Dimensiones de la adoración" id="dimTabs"></div>
+        <div id="dimPanels"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C6 -->
+  <section class="block chapter" id="c6" data-title="¿Por qué debemos adorar?" data-stage="Comprender">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 06 <i>· Comprender</i></p><h3>¿Por qué debemos adorar?</h3><p>Cuatro razones que sostienen todo lo demás.</p></header>
+      <div class="stack g2" id="reasons"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PARTE II — DANZA ================= -->
+<div class="part" data-area="danza" id="danza">
+  <section class="part-intro" aria-labelledby="p2t">
+    <span class="numeral" aria-hidden="true">II</span>
+    <div class="wrap">
+      <div class="part-icon rv"><span data-i="dance"></span></div>
+      <p class="eyebrow rv">Sección II</p>
+      <h2 id="p2t" class="rv">Danza</h2>
+      <p class="lede q rv">“El cuerpo también puede convertirse en una expresión de adoración.”</p>
+      <div class="toc" data-toc="danza"></div>
+    </div>
+  </section>
+
+  <!-- C7 -->
+  <section class="block chapter" id="c7" data-title="Movimientos de la danza" data-stage="Explorar">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 07 <i>· Explorar</i></p><h3>Movimientos de la danza</h3><p>Cada movimiento tiene un nombre, un significado y una raíz bíblica. Toca para ampliar.</p></header>
+      <div class="grid2" id="moves"></div>
+    </div>
+  </section>
+
+  <!-- C8 -->
+  <section class="block chapter colors-sec" id="c8" data-title="Cromática del altar" data-stage="Explorar">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 08 <i>· Explorar</i></p><h3>El significado de los colores</h3><p>Cromática del altar: cada color comunica un mensaje. Toca uno para verlo en detalle.</p></header>
+      <div class="spectrum rv" id="spectrum" aria-hidden="true"></div>
+      <div class="colors" id="colors"></div>
+    </div>
+  </section>
+
+  <!-- C9 -->
+  <section class="block chapter alert-sec" id="c9" data-title="Errores que debemos evitar" data-stage="Aplicar">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 09 <i>· Aplicar</i></p><h3>Errores que debemos evitar</h3></header>
+      <div class="alert-banner rv"><span data-i="alert"></span><p><strong>Errores comunes en los ministerios</strong>Reconocerlos a tiempo protege al equipo, a la congregación y, sobre todo, el altar.</p></div>
+      <div class="stack" id="errors"></div>
+      <div class="altar-quote rv"><span data-i="flame"></span><p>“El altar no es un escenario.<span>Es un lugar de servicio.”</span></p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PARTE III — VESTUARIO ================= -->
+<div class="part" data-area="vestuario" id="vestuario">
+  <section class="part-intro" aria-labelledby="p3t">
+    <span class="numeral" aria-hidden="true">III</span>
+    <div class="wrap">
+      <div class="part-icon rv"><span data-i="robe"></span></div>
+      <p class="eyebrow rv">Alabanza + Danza</p>
+      <h2 id="p3t" class="rv">El vestuario<br>sacerdotal</h2>
+      <p class="lede rv">Diseño, orden, modestia y propósito.</p>
+    </div>
+  </section>
+
+  <!-- C10 -->
+  <section class="block chapter" id="c10" data-title="Vestuario sacerdotal" data-stage="Aplicar">
+    <div class="wrap">
+      <header class="ch-head rv"><p class="ch-meta">Capítulo 10 <i>· Aplicar</i></p><h3>Principios del vestuario</h3><p>Una sección compartida: elige tu ministerio.</p></header>
+      <div class="rv">
+        <div class="tabs split" role="tablist" aria-label="Ministerio" id="wearTabs">
+          <button class="tab" role="tab" id="wt1" aria-controls="wp1" aria-selected="true"><span data-i="dance"></span>Danza</button>
+          <button class="tab" role="tab" id="wt2" aria-controls="wp2" aria-selected="false" tabindex="-1"><span data-i="mic"></span>Músicos y cantores</button>
+        </div>
+        <div role="tabpanel" id="wp1" aria-labelledby="wt1"><div class="stack" id="wearDanza"></div></div>
+        <div role="tabpanel" id="wp2" aria-labelledby="wt2" hidden><div class="stack" id="wearMus"></div></div>
+      </div>
+
+      <p class="sub-h rv"><b>—</b> Significado de las prendas</p>
+      <div class="stack g3" id="garments"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONCLUSIÓN ================= -->
+<div class="part" data-area="fin">
+  <section class="final chapter" id="c11" data-title="El altar sincronizado" data-stage="Reflexionar" aria-labelledby="fint">
+    <div class="wrap">
+      <svg class="final-art rv" viewBox="0 0 120 110" aria-hidden="true">
+        <defs><linearGradient id="fl2" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e3863f"/><stop offset=".55" stop-color="#eec46f"/><stop offset="1" stop-color="#fff3d2"/></linearGradient></defs>
+        <circle cx="60" cy="58" r="44" fill="none" stroke="#d8b46f" stroke-opacity=".2" stroke-dasharray="2 6"/>
+        <path class="flame" d="M60 14c12 15 19 26 16 40-2 10-9 16-16 16s-14-6-16-16c-2-11 4-21 9-28 1 8 4 11 7 13 1-9-2-16 0-25z" fill="url(#fl2)"/>
+        <rect x="34" y="72" width="52" height="7" rx="2" fill="#d8b46f"/>
+        <rect x="42" y="79" width="36" height="22" fill="none" stroke="#d8b46f" stroke-opacity=".7"/>
+      </svg>
+      <p class="eyebrow rv">Capítulo 11 · Reflexionar</p>
+      <h2 id="fint" class="rv">El altar<br>sincronizado</h2>
+      <p class="lede rv">La danza y la adoración bíblica no toleran el desorden.</p>
+
+      <ul class="eq" aria-label="Adoración más música más danza más vestuario más orden más discernimiento">
+        <li class="rv" style="--d:0.00s"><span data-i="flame"></span>Adoración</li>
+        <li class="rv" style="--d:0.05s"><span data-i="music"></span>Música</li>
+        <li class="rv" style="--d:0.10s"><span data-i="dance"></span>Danza</li>
+        <li class="rv" style="--d:0.15s"><span data-i="robe"></span>Vestuario</li>
+        <li class="rv" style="--d:0.20s"><span data-i="order"></span>Orden</li>
+        <li class="rv" style="--d:0.25s"><span data-i="eye"></span>Discernimiento</li>
+      </ul>
+      <div class="eq-eq rv" aria-hidden="true">=</div>
+      <p class="one-altar rv"><small>El resultado</small>Un solo altar</p>
+
+      <blockquote class="closing rv">Cuando comprendemos lo que cantamos, lo que vestimos y cómo nos movemos, nuestra ministración deja de ser simplemente una presentación y se convierte en una expresión consciente de adoración.</blockquote>
+
+      <button class="btn rv" id="topBtn"><span data-i="arrowU"></span> Volver al inicio</button>
+      <p class="foot-meta">Salmista Savina Félix · Lluvias de Bendiciones · Juan 4:23</p>
+    </div>
+  </section>
+</div>
+</main>
+
+<nav class="dock" aria-label="Secciones principales">
+  <div class="seg" id="seg">
+    <span class="seg-ind" id="segInd" aria-hidden="true"></span>
+    <button data-go="alabanza" aria-label="Alabanza y Adoración" aria-current="false"><span data-i="music"></span>Alabanza</button>
+    <button data-go="danza" aria-label="Danza" aria-current="false"><span data-i="dance"></span>Danza</button>
+    <button data-go="vestuario" aria-label="Vestuario sacerdotal" aria-current="false"><span data-i="robe"></span>Vestuario</button>
+  </div>
+  <button class="dock-idx" id="idxBtn" aria-label="Abrir índice de capítulos" aria-haspopup="dialog"><span data-i="grid"></span></button>
+</nav>
+
+<div class="sheet-bg" id="sheetBg" hidden></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+  <div class="sheet-grip" id="sheetGrip" aria-hidden="true"><span></span></div>
+  <button class="sheet-x" id="sheetX" aria-label="Cerrar"><span data-i="x"></span></button>
+  <div class="sheet-scroll" id="sheetBody"></div>
+</div>
+
+<noscript><p style="padding:20px;text-align:center;color:#bdb19f">Activa JavaScript para ver todo el contenido interactivo.</p></noscript>
+
+<script>
+(function(){
+'use strict';
+const $=(s,c=document)=>c.querySelector(s);
+const $$=(s,c=document)=>Array.from(c.querySelectorAll(s));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const behavior=reduce?'auto':'smooth';
+
+/* ---------- Icons ---------- */
+const I={
+  chev:'<path d="M6 9l6 6 6-6"/>',
+  arrowR:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+  arrowL:'<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  arrowU:'<path d="M12 19V5M6 11l6-6 6 6"/>',
+  x:'<path d="M6 6l12 12M18 6L6 18"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>',
+  book:'<path d="M4 19.5V5a2 2 0 0 1 2-2h14v15H6.5A2.5 2.5 0 0 0 4 20.5 2.5 2.5 0 0 0 6.5 23H20"/>',
+  music:'<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+  dance:'<circle cx="13" cy="4" r="1.8"/><path d="M12.5 7l-1.5 6 3 3 1 5M11 13l-3 2-1 5M12.5 7.5l4.5-3.5M12.5 7.5L7 9l-2-2"/>',
+  robe:'<path d="M9 3h6l1.5 3.5L21 8.5 19 13l-2.5-1V21h-9v-9L5 13 3 8.5l4.5-2z"/><path d="M9 3c.6 1.6 1.6 2.4 3 2.4S14.4 4.6 15 3"/>',
+  mic:'<rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/>',
+  grid:'<rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/>',
+  tap:'<path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11l3.8.8a2 2 0 0 1 1.6 2.3l-.9 5A2 2 0 0 1 14.5 21H11a2 2 0 0 1-1.6-.8L6 15.5a1.5 1.5 0 0 1 2.2-2L9 14.3"/>',
+  swipe:'<path d="M3 8h13M12 4l4 4-4 4M21 16H8M12 12l-4 4 4 4"/>',
+  alert:'<path d="M12 3.5 22 20.5H2z"/><path d="M12 10v4.5M12 17.5v.01"/>',
+  flame:'<path d="M12 3c3 4 5.5 6.5 5.5 10.5a5.5 5.5 0 0 1-11 0c0-2.4 1.1-4.2 2.7-5.7.3 1.8 1 2.9 2.1 3.5C11 9 11 6 12 3z"/>',
+  star:'<path d="M12 3l1.9 5.3L19 10l-5.1 1.8L12 17l-1.9-5.2L5 10l5.1-1.7z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/>',
+  dove:'<path d="M3 13c4 .2 6.5-2 8.5-5 1.1-1.6 2.6-2.4 4.2-2.4 1.2 0 2.2.6 2.8 1.4L22 8l-3.2 1.2C18.5 15 14.5 19 8.5 19H5l2.2-2.2C5 16.5 3.7 15.2 3 13z"/><path d="M11.5 8c-.8 3 .2 5.5 2.5 6.5"/>',
+  heart:'<path d="M12 20s-7.5-4.6-7.5-10.4A4.1 4.1 0 0 1 12 7.2a4.1 4.1 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z"/>',
+  drop:'<path d="M12 3c3.8 4.6 6.3 8 6.3 11.2a6.3 6.3 0 0 1-12.6 0C5.7 11 8.2 7.6 12 3z"/><path d="M9 14.5a3 3 0 0 0 3 3"/>',
+  compass:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/><circle cx="12" cy="12" r="2"/>',
+  home:'<path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5M10 20v-5h4v5"/>',
+  sword:'<path d="M14.5 3.5H20.5V9.5L10 20l-3-3z"/><path d="M5 15l4 4M3.5 20.5l2-2"/>',
+  people:'<circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2.5 20c.6-3.4 2.8-5.5 5.5-5.5s4.9 2.1 5.5 5.5M14 14.6c.9-.4 1.9-.6 3-.6 2.4 0 4.1 1.8 4.5 4.5"/>',
+  fp:'<path d="M12 21c-4.5-2-7-6-7-10a7 7 0 0 1 14 0c0 4-2.5 8-7 10z"/><path d="M12 8v6M9 11h6"/>',
+  crown:'<path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/><path d="M5 19h14"/>',
+  scale:'<path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/>',
+  speak:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/>',
+  link:'<path d="M9.5 14.5l5-5"/><path d="M11 6.5l1.5-1.5a4.2 4.2 0 0 1 6 6L17 12.5M13 17.5 11.5 19a4.2 4.2 0 0 1-6-6L7 11.5"/>',
+  person:'<circle cx="12" cy="7" r="3.5"/><path d="M5 21c.8-4 3.6-6.5 7-6.5s6.2 2.5 7 6.5"/>',
+  eye:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  flag:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+  order:'<path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1.2"/><circle cx="16" cy="12" r="1.2"/><circle cx="11" cy="18" r="1.2"/>',
+  shield:'<path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/>',
+  // Movimientos
+  m_post:'<circle cx="5.5" cy="17.5" r="1.8"/><path d="M7.5 16.5c2-3.6 5.4-5 8.6-3.6L17.5 20M15.6 13.5l-3 6.5M9.5 15l-1.5 5"/><path d="M2.5 21h19"/>',
+  m_giro:'<circle cx="12" cy="4.5" r="1.8"/><path d="M12 7v6.5M12 13.5l-3 6.5M12 13.5l3 6.5M6.5 9.5 12 10.5l5.5-1"/><path d="M3.8 12.5a8.5 8.5 0 0 0 2.4 5.6M6.2 18.1l-.2-2.8M6.2 18.1l-2.7-.6M20.2 11.5a8.5 8.5 0 0 0-2.4-5.6M17.8 5.9l.2 2.8M17.8 5.9l2.7.6"/>',
+  m_salto:'<circle cx="12" cy="3.8" r="1.8"/><path d="M12 6.3v6M12 8.3 7.5 4.5M12 8.3l4.5-3.8M12 12.3l-4 2.7 1.2 3M12 12.3l4 2.7-1.2 3"/><path d="M5 21h14" stroke-dasharray="2 2.5"/>',
+  m_marcha:'<circle cx="10" cy="4" r="1.8"/><path d="M10 6.5l1.2 6.2M11.2 12.7l-3 4-1.7 4.3M11.2 12.7l3 3.8v4.5M10.3 8.6l-3.3 3.2M10.3 8.6l5 1.6"/><path d="M17.5 3v9M17.5 3h4l-1.2 2 1.2 2h-4"/>',
+  m_manos:'<circle cx="12" cy="6" r="1.8"/><path d="M12 8.5v7M12 15.5l-2.5 5.5M12 15.5l2.5 5.5M12 10.5 4.5 8M12 10.5l7.5-2.5"/><path d="M3 4.5l1 1.5M5.5 3.2l.3 1.8M21 4.5l-1 1.5M18.5 3.2l-.3 1.8"/>',
+  m_correr:'<circle cx="15" cy="4" r="1.8"/><path d="M14 6.5l-2.6 6M11.4 12.5l3.4 3-1.3 5.5M11.4 12.5l-4 1.6-1.6 3.4M13.3 8l3.7 2.2 2.4-1.8M13.3 8l-4 .8L7.2 11.5"/><path d="M1.5 9h3.5M1 13h3M2 17h3"/>',
+  // Prendas
+  g_tunica:'<path d="M9 3h6l1.5 3.5L21 8.5 19 13l-2.5-1V21h-9v-9L5 13 3 8.5l4.5-2z"/><path d="M9 3c.6 1.6 1.6 2.4 3 2.4S14.4 4.6 15 3M12 6v15"/>',
+  g_cinto:'<path d="M2.5 9.5h19v5h-19z"/><rect x="9.5" y="8" width="5" height="8" rx="1"/><path d="M12 10.5v3M5 9.5v5M19 9.5v5"/>',
+  g_manto:'<path d="M8 3h8l5.5 18h-19z"/><path d="M8 3c.8 2 2.2 3 4 3s3.2-1 4-3M12 6l-1 15M12 6l1 15"/>'
+};
+function ico(k,cls){return '<svg class="ico'+(cls?' '+cls:'')+'" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+(I[k]||'')+'</svg>';}
+function hydrateIcons(root){$$('[data-i]',root||document).forEach(el=>{if(el.dataset.done)return;el.dataset.done=1;el.insertAdjacentHTML('afterbegin',ico(el.dataset.i));if(el.tagName==='SPAN'&&!el.className)el.replaceWith(...el.childNodes);});}
+const ref=r=>'<button class="ref" data-ref="'+r+'" aria-expanded="false">'+ico('book')+r+ico('chev')+'</button>';
+const refs=a=>'<div class="refs">'+[].concat(a).map(ref).join('')+'</div>';
+let uid=0;
+function acc(o){
+  const id='acc'+(++uid);
+  const lead=o.icon?'<span class="acc-ico">'+ico(o.icon)+'</span>':(o.num?'<span class="acc-num">'+o.num+'</span>':'');
+  return '<div class="acc rv"'+(o.d?' style="--d:'+o.d+'s"':'')+'><button class="acc-btn" aria-expanded="false" aria-controls="'+id+'">'+lead+
+    '<span class="acc-head"><span class="acc-title">'+(o.orig?'<span class="acc-orig" lang="'+(o.lang||'he')+'">'+o.orig+'</span>':'')+o.title+'</span>'+(o.lead?'<span class="acc-lead">'+o.lead+'</span>':'')+'</span>'+
+    '<span class="chev">'+ico('chev')+'</span></button>'+
+    '<div class="acc-panel" id="'+id+'" inert><div><div class="acc-body">'+o.body+(o.ref?refs(o.ref):'')+'</div></div></div></div>';
+}
+const applyBox=(label,t)=>'<div class="apply"><small>'+label+'</small>'+t+'</div>';
+
+/* ================= DATA ================= */
+/* Citas bíblicas: Reina-Valera 1909 (dominio público), ortografía actualizada */
+const VERSION='Reina-Valera 1909';
+/* Para cambiar de versión: reemplaza solo el texto entre comillas de cada versículo
+   y actualiza VERSION arriba. Formato: "Referencia":[[número, "texto"], ...] */
+const VERSES={
+  "Génesis 22:5":[[5,"Entonces dijo Abraham a sus mozos: Esperaos aquí con el asno, y yo y el muchacho iremos hasta allí, y adoraremos, y volveremos a vosotros."]],
+  "Éxodo 24:10":[[10,"Y vieron al Dios de Israel; y había debajo de sus pies como un embaldosado de zafiro, semejante al cielo cuando está sereno."]],
+  "Éxodo 25:11":[[11,"Y la cubrirás de oro puro; por dentro y por fuera la cubrirás; y harás sobre ella una cornisa de oro alrededor."]],
+  "Éxodo 28:31":[[31,"Harás el manto del ephod todo de jacinto:"]],
+  "Éxodo 30:16":[[16,"Y tomarás de los hijos de Israel el dinero de las expiaciones, y lo darás para la obra del tabernáculo del testimonio: y será por memoria a los hijos de Israel delante de Jehová, para expiar vuestras personas."]],
+  "Levítico 9:22":[[22,"Después alzó Aarón sus manos hacia el pueblo y bendíjolos: y descendió de hacer la expiación, y el holocausto, y el sacrificio de las paces."]],
+  "Josué 6:3":[[3,"Cercaréis pues la ciudad todos los hombres de guerra, yendo alrededor de la ciudad una vez: y esto haréis seis días."]],
+  "1 Samuel 16:23":[[23,"Y cuando el espíritu malo de parte de Dios era sobre Saúl, David tomaba el arpa, y tañía con su mano; y Saúl tenía refrigerio, y estaba mejor, y el espíritu malo se apartaba de él."]],
+  "2 Samuel 6:14":[[14,"Y David saltaba con toda su fuerza delante de Jehová; y tenía vestido David un ephod de lino."]],
+  "2 Reyes 2:13":[[13,"Alzó luego el manto de Elías que se le había caído, y volvió, y paróse a la orilla del Jordán."]],
+  "1 Crónicas 25:1-6":[[1,"Asimismo David y los príncipes del ejército apartaron para el ministerio a los hijos de Asaph, y de Hemán, y de Jeduthún, los cuales profetizasen con arpas, salterios, y címbalos: y el número de ellos fue, de hombres idóneos para la obra de su ministerio respectivo:"],[2,"De los hijos de Asaph: Zachûr, José, Methanías, y Asareela, hijos de Asaph, bajo la dirección de Asaph, el cual profetizaba a la orden del rey."],[3,"De Jeduthún: los hijos de Jeduthún, Gedalías, Sesi, Jesaías, Hasabías, y Mathithías, y Simi: seis, bajo la mano de su padre Jeduthún, el cual profetizaba con arpa, para celebrar y alabar a Jehová."],[4,"De Hemán: los hijos de Hemán, Buccia, Mathanía, Uzziel, Sebuel, Jerimoth, Hananías, Hanani, Eliatha, Gidalthi, Romamti-ezer, Josbecasa, Mallothi, Othir, y Mahazioth."],[5,"Todos estos fueron hijos de Hemán, vidente del rey en palabras de Dios, para ensalzar el poder suyo: y dio Dios a Hemán catorce hijos y tres hijas."],[6,"Y todos estos estaban bajo la dirección de su padre en la música, en la casa de Jehová, con címbalos, salterios y arpas, para el ministerio del templo de Dios, por disposición del rey acerca de Asaph, de Jeduthún, y de Hemán."]],
+  "2 Crónicas 7:3":[[3,"Y como vieron todos los hijos de Israel descender el fuego y la gloria de Jehová sobre la casa, cayeron en tierra sobre sus rostros en el pavimento, y adoraron, confesando a Jehová y diciendo: Que es bueno, que su misericordia es para siempre."]],
+  "2 Crónicas 20:22":[[22,"Y como comenzaron con clamor y con alabanza, puso Jehová contra los hijos de Ammón, de Moab, y del monte de Seir, las emboscadas de ellos mismos que venían contra Judá, y matáronse los unos a los otros:"]],
+  "Job 1:20-21":[[20,"Entonces Job se levantó, y rasgó su manto, y trasquiló su cabeza, y cayendo en tierra adoró;"],[21,"Y dijo: Desnudo salí del vientre de mi madre, y desnudo tornaré allá. Jehová dio, y Jehová quitó: sea el nombre de Jehová bendito."]],
+  "Salmo 1:3":[[3,"Y será como el árbol plantado junto a arroyos de aguas, que da su fruto en su tiempo, y su hoja no cae; y todo lo que hace, prosperará."]],
+  "Salmo 12:6":[[6,"Las palabras de Jehová, palabras limpias; plata refinada en horno de tierra, purificada siete veces."]],
+  "Salmo 18:29":[[29,"Porque contigo desharé ejércitos; y con mi Dios asaltaré muros."]],
+  "Salmo 21:13":[[13,"Ensálzate, oh Jehová, con tu fortaleza: cantaremos y alabaremos tu poderío."]],
+  "Salmo 22:3":[[3,"Tú empero eres santo, tú que habitas entre las alabanzas de Israel."]],
+  "Salmo 40:3":[[3,"Puso luego en mi boca canción nueva, alabanza a nuestro Dios. Verán esto muchos, y temerán, y esperarán en Jehová."]],
+  "Salmo 50:23":[[23,"El que sacrifica alabanza me honrará: y al que ordenare su camino, le mostraré la salud de Dios."]],
+  "Salmo 63:4":[[4,"Así te bendeciré en mi vida: en tu nombre alzaré mis manos."]],
+  "Salmo 89:9":[[9,"Tú tienes dominio sobre la bravura de la mar: cuando se levantan sus ondas, tú las sosiegas."]],
+  "Salmo 95:6":[[6,"Venid, adoremos y postrémonos; arrodillémonos delante de Jehová nuestro hacedor."]],
+  "Salmo 104:15":[[15,"Y el vino que alegra el corazón del hombre, y el aceite que hace lucir el rostro, y el pan que sustenta el corazón del hombre."]],
+  "Salmo 117:1":[[1,"Alabad a Jehová, naciones todas; pueblos todos, alabadle."]],
+  "Salmo 150:1":[[1,"Alabad a Dios en su santuario: alabadle en la extensión de su fortaleza."]],
+  "Salmo 150:6":[[6,"Todo lo que respira alabe a JAH. Aleluya."]],
+  "Eclesiastés 3:4":[[4,"Tiempo de llorar, y tiempo de reir; tiempo de endechar, y tiempo de bailar;"]],
+  "Cantares 1:4":[[4,"Llévame en pos de ti, correremos. Metióme el rey en sus cámaras: nos gozaremos y alegraremos en ti; acordarémonos de tus amores más que del vino: los rectos te aman."]],
+  "Isaías 1:18":[[18,"Venid luego, dirá Jehová, y estemos a cuenta: si vuestros pecados fueren como la grana, como la nieve serán emblanquecidos: si fueren rojos como el carmesí, vendrán a ser como blanca lana."]],
+  "Isaías 43:21":[[21,"Este pueblo crié para mí; mis alabanzas publicará."]],
+  "Daniel 3:18":[[18,"Y si no, sepas, oh rey, que tu dios no adoraremos, ni tampoco honraremos la estatua que has levantado."]],
+  "Daniel 4:34":[[34,"Mas al fin del tiempo yo Nabucodonosor alcé mis ojos al cielo, y mi sentido me fue vuelto; y bendije al Altísimo, y alabé y glorifiqué al que vive para siempre; porque su señorío es sempiterno, y su reino por todas las edades."]],
+  "Mateo 4:10":[[10,"Entonces Jesús le dice: Vete, Satanás, que escrito está: Al Señor tu Dios adorarás y a él solo servirás."]],
+  "Mateo 6:10":[[10,"Venga tu reino. Sea hecha tu voluntad, como en el cielo, así también en la tierra."]],
+  "Mateo 15:8-9":[[8,"Este pueblo de labios me honra; mas su corazón lejos está de mí."],[9,"Mas en vano me honran, enseñando doctrinas y mandamientos de hombres."]],
+  "Lucas 22:20":[[20,"Asimismo también el vaso, después que hubo cenado, diciendo: Este vaso es el nuevo pacto en mi sangre, que por vosotros se derrama."]],
+  "Juan 2:10":[[10,"Y dícele: Todo hombre pone primero el buen vino, y cuando están satisfechos, entonces lo que es peor; mas tú has guardado el buen vino hasta ahora."]],
+  "Juan 3:30":[[30,"A él conviene crecer, mas a mí menguar."]],
+  "Juan 4:23":[[23,"Mas la hora viene, y ahora es, cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad; porque también el Padre tales adoradores busca que le adoren."]],
+  "Juan 4:23-24":[[23,"Mas la hora viene, y ahora es, cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad; porque también el Padre tales adoradores busca que le adoren."],[24,"Dios es Espíritu; y los que le adoran, en espíritu y en verdad es necesario que adoren."]],
+  "Juan 4:24":[[24,"Dios es Espíritu; y los que le adoran, en espíritu y en verdad es necesario que adoren."]],
+  "Juan 19:2-3":[[2,"Y los soldados entretejieron de espinas una corona, y pusiéronla sobre su cabeza, y le vistieron de una ropa de grana;"],[3,"Y decían: ¡Salve, Rey de los Judíos! y dábanle de bofetadas."]],
+  "Hechos 2:3":[[3,"Y se les aparecieron lenguas repartidas, como de fuego, que se asentó sobre cada uno de ellos."]],
+  "Hechos 16:14":[[14,"Entonces una mujer llamada Lidia, que vendía púrpura en la ciudad de Tiatira, temerosa de Dios, estaba oyendo; el corazón de la cual abrió el Señor para que estuviese atenta a lo que Pablo decía."]],
+  "Romanos 12:1":[[1,"Así que, hermanos, os ruego por las misericordias de Dios, que presentéis vuestros cuerpos en sacrificio vivo, santo, agradable a Dios, que es vuestro racional culto."]],
+  "Efesios 6:14":[[14,"Estad pues firmes, ceñidos vuestros lomos de verdad, y vestidos de la cota de justicia,"]],
+  "1 Timoteo 2:9":[[9,"Asimismo también las mujeres, ataviándose en hábito honesto, con vergüenza y modestia; no con cabellos encrespados, ú oro, o perlas, o vestidos costosos,"]],
+  "Hebreos 9:22":[[22,"Y casi todo es purificado según la ley con sangre; y sin derramamiento de sangre no se hace remisión."]],
+  "1 Pedro 1:7":[[7,"Para que la prueba de vuestra fe, mucho más preciosa que el oro, el cual perece, bien que sea probado con fuego, sea hallada en alabanza, gloria y honra, cuando Jesucristo fuere manifestado:"]],
+  "1 Pedro 2:9":[[9,"Mas vosotros sois linaje escogido, real sacerdocio, gente santa, pueblo adquirido, para que anunciéis las virtudes de aquel que os ha llamado de las tinieblas a su luz admirable:"]],
+  "Apocalipsis 1:15":[[15,"Y sus pies semejantes al latón fino, ardientes como en un horno; y su voz como ruido de muchas aguas."]],
+  "Apocalipsis 4:8-11":[[8,"Y los cuatro animales tenían cada uno por sí seis alas alrededor, y de dentro estaban llenos de ojos; y no tenían reposo día ni noche, diciendo: Santo, santo, santo el Señor Dios Todopoderoso, que era, y que es, y que ha de venir."],[9,"Y cuando aquellos animales daban gloria y honra y alabanza al que estaba sentado en el trono, al que vive para siempre jamás,"],[10,"Los veinticuatro ancianos se postraban delante del que estaba sentado en el trono, y adoraban al que vive para siempre jamás, y echaban sus coronas delante del trono, diciendo:"],[11,"Señor, digno eres de recibir gloria y honra y virtud: porque tú criaste todas las cosas, y por tu voluntad tienen ser y fueron criadas."]],
+  "Apocalipsis 5:12":[[12,"Que decían en alta voz: El Cordero que fue inmolado es digno de tomar el poder y riquezas y sabiduría, y fortaleza y honra y gloria y alabanza."]],
+  "Apocalipsis 7:14":[[14,"Y yo le dije: Señor, tú lo sabes. Y él me dijo: Estos son los que han venido de grande tribulación, y han lavado sus ropas, y las han blanqueado en la sangre del Cordero."]],
+  "Apocalipsis 19:8":[[8,"Y le fue dado que se vista de lino fino, limpio y brillante: porque el lino fino son las justificaciones de los santos."]]
+};
+const RX=new RegExp('('+Object.keys(VERSES).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?!\\d)','g');
+const verseHTML=k=>(VERSES[k]||[]).map(v=>'<sup>'+v[0]+'</sup>'+v[1]).join(' ');
+/* Convierte las citas escritas dentro del texto en botones */
+function linkify(root){
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>{RX.lastIndex=0;return n.parentElement.closest('button,script,style,svg,h2,h3,.toc,.topbar,.verse')||!RX.test(n.nodeValue)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT;}});
+  const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(n=>{
+    const s=n.nodeValue,frag=document.createDocumentFragment();let last=0,m;RX.lastIndex=0;
+    while((m=RX.exec(s))){
+      frag.append(s.slice(last,m.index));
+      const b=document.createElement('button');b.className='vref';b.dataset.ref=m[1];b.setAttribute('aria-expanded','false');b.textContent=m[1];
+      frag.append(b);last=m.index+m[1].length;
+    }
+    frag.append(s.slice(last));n.replaceWith(frag);
+  });
+}
+let vid=0;
+function toggleVerse(btn){
+  const key=btn.dataset.ref;
+  if(!VERSES[key])return;
+  if(btn.closest('.cover-top')){openVerseSheet(key,btn);return;}
+  const host=btn.closest('.refs')||btn.closest('.layer,.apply,blockquote')||btn.closest('p')||btn.parentElement;
+  let panel=host.nextElementSibling;
+  if(!panel||!panel.classList.contains('verse')){
+    panel=document.createElement('div');panel.className='verse';panel.id='vs'+(++vid);panel.setAttribute('role','region');
+    panel.innerHTML='<div><div class="verse-in"></div></div>';host.after(panel);void panel.offsetWidth;
+  }
+  const btns=$$('[data-ref]',host);
+  btns.forEach(b=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls',panel.id);});
+  if(panel.classList.contains('open')&&panel.dataset.key===key){panel.classList.remove('open');panel.inert=true;return;}
+  panel.dataset.key=key;panel.setAttribute('aria-label',key);panel.inert=false;
+  $('.verse-in',panel).innerHTML='<p class="v-text">'+verseHTML(key)+'</p><p class="v-foot"><span>'+key+'</span><span>'+VERSION+'</span></p>';
+  btns.forEach(b=>{if(b.dataset.ref===key)b.setAttribute('aria-expanded','true');});
+  panel.classList.add('open');
+}
+function openVerseSheet(key,from){
+  openSheet('<p class="sh-kicker">Cita bíblica · '+VERSION+'</p><h2 id="sheetTitle">'+key+'</h2><div class="verse open"><div><div class="verse-in"><p class="v-text">'+verseHTML(key)+'</p></div></div></div>','var(--gold)',from);
+}
+const PURPOSE=[
+  {n:'01',t:'Alineación espiritual',icon:'compass',l:'Sintoniza la realidad terrenal con el diseño original del Cielo.',
+   b:'<p>Cuando adoramos, nuestra agenda se somete a la de Dios. Es el <strong>“hágase Tu voluntad, como en el cielo, así también en la tierra”</strong> convertido en postura.</p><p>La congregación deja de girar en torno a sus propias necesidades y se alinea con el orden, la voluntad y el propósito del Cielo.</p>',r:'Mateo 6:10'},
+  {n:'02',t:'Atmósfera de habitación',icon:'home',l:'Atrae la presencia manifiesta de Dios.',
+   b:'<p>Dios <strong>habita en medio de las alabanzas</strong> de Su pueblo. La adoración no “trae” a un Dios ausente: prepara un lugar donde Su presencia manifiesta se hace evidente y perceptible.</p><p>Por eso el ambiente de un servicio cambia cuando la iglesia deja de cantar canciones y comienza a adorar a una Persona.</p>',r:'Salmo 22:3'},
+  {n:'03',t:'Guerra espiritual',icon:'sword',l:'Derriba fortalezas y desmantela argumentos satánicos.',
+   b:'<p>Cuando Judá comenzó a cantar y a alabar, <strong>el Señor puso emboscadas</strong> contra sus enemigos. Los cantores fueron delante del ejército: la alabanza fue la primera línea de batalla.</p><p>La adoración declara la verdad de Dios por encima de los argumentos del enemigo y derriba fortalezas en la mente y en la atmósfera.</p>',r:'2 Crónicas 20:22'},
+  {n:'04',t:'Transformación colectiva',icon:'people',l:'Rompe cadenas de opresión, depresión y enfermedad mental en la congregación.',
+   b:'<p>Cuando David tocaba el arpa, <strong>Saúl tenía alivio</strong> y el espíritu malo se apartaba de él. La adoración ministrada con unción alcanza a toda la congregación, no solo a quien está en el altar.</p><p>Por eso ministrar es una responsabilidad: lo que sucede en el altar afecta a las personas que están delante.</p>',r:'1 Samuel 16:23'}
+];
+
+const HEB=[
+  {t:'Shachah',h:'שָׁחָה',m:'Postrarse',d:'Reverencia absoluta ante Dios.',r:'Génesis 22:5',tag:'La postura',
+   x:'<p>Inclinarse, postrarse rostro en tierra. Es la primera vez que la palabra “adorar” aparece en la Biblia: Abraham sube al monte con Isaac y dice “iremos y adoraremos”.</p><p>Desde el principio, adorar implicó entregar lo más amado. Shachah es la postura que sostiene todas las demás expresiones.</p>',e:'Postración, inclinarse, silencio reverente delante de Dios.'},
+  {t:'Halal',h:'הָלַל',m:'Celebrar / exaltar',d:'Ser ruidoso, celebrar y proclamar las grandezas de Dios.',r:'Salmo 150:1',
+   x:'<p>Raíz de la palabra <strong>Aleluya</strong> (Hallelu-Yah: “alaben a Jah”). Describe una celebración entusiasta, sin vergüenza, que incluso puede parecer exagerada ante los ojos humanos.</p>',e:'Celebración jubilosa, proclamación en voz alta, júbilo congregacional.'},
+  {t:'Yadah',h:'יָדָה',m:'Levantar las manos',d:'Expresión de gratitud y sumisión.',r:'Salmo 63:4',
+   x:'<p>Viene de <em>yad</em>, “mano”. Levantar las manos es reconocer que no tenemos nada que esconder: es gratitud y rendición a la vez, como un niño que alza los brazos hacia su padre.</p>',e:'Manos alzadas en gratitud, rendición y confesión.'},
+  {t:'Barak',h:'בָּרַךְ',m:'Arrodillarse',d:'Reconocer a Dios como Rey.',r:'Salmo 95:6',
+   x:'<p>Significa arrodillarse y también <strong>bendecir</strong>. Arrodillarse delante de alguien era reconocer su autoridad como rey. Bendecir a Dios es declarar quién es Él desde una postura de honra.</p>',e:'Arrodillarse, bendecir el nombre del Señor en quietud.'},
+  {t:'Zamar',h:'זָמַר',m:'Tocar instrumentos',d:'Hacer música sagrada acompañada de cantos.',r:'Salmo 21:13',
+   x:'<p>Hace referencia a tocar las cuerdas, a hacer música con instrumentos. El instrumento también adora cuando quien lo toca tiene el corazón rendido: la música no es acompañamiento, es ofrenda.</p>',e:'Ministración instrumental, música profética, interludios de adoración.'},
+  {t:'Tehillah',h:'תְּהִלָּה',m:'Cántico espontáneo',d:'Canto de alabanza o cántico nuevo.',r:'Salmo 40:3',
+   x:'<p>Es el canto que nace en el momento, el <strong>cántico nuevo</strong> que el Espíritu pone en la boca. Es precisamente en la <em>tehillah</em> de Su pueblo donde Dios habita (Salmo 22:3).</p>',e:'Cántico nuevo, canto espontáneo guiado por el Espíritu.'},
+  {t:'Towdah',h:'תּוֹדָה',m:'Sacrificio de alabanza',d:'Dar gracias por aquello que todavía no vemos, pero creemos por fe.',r:'Salmo 50:23',
+   x:'<p>Era una ofrenda de acción de gracias. Se llama <strong>sacrificio</strong> porque cuesta: agradecer antes de ver la respuesta, en medio de la espera, es una declaración de fe.</p>',e:'Gratitud anticipada, alabanza en medio de la prueba.'},
+  {t:'Shabach',h:'שָׁבַח',m:'Grito de victoria',d:'Clamar en alta voz como expresión de triunfo y adoración.',r:'Salmo 117:1',
+   x:'<p>Alabar en alta voz, gritar con triunfo. Curiosamente, la misma raíz se usa para <strong>sosegar</strong> las olas del mar (Salmo 89:9): el grito de victoria del pueblo de Dios calma la tormenta.</p>',e:'Grito de júbilo, proclamación de victoria.'}
+];
+
+const LANGS=[
+  {k:'Hebreo',n:8,note:'Lengua del Antiguo Testamento. Cada palabra describe una forma distinta de alabar con el cuerpo, la voz o los instrumentos.',
+   items:HEB.map(w=>({orig:w.h,t:w.t,l:w.m,b:'<p>'+w.d+'</p>',r:w.r}))},
+  {k:'Arameo',n:2,note:'Lengua usada en porciones de Daniel y Esdras, en el contexto del exilio en Babilonia.',items:[
+    {orig:'סְגִד',t:'Segid',l:'Postrarse, rendir homenaje',b:'<p>Es el término que aparece cuando Nabucodonosor exige adorar la estatua de oro, y que Sadrac, Mesac y Abed-nego se niegan a hacer. La adoración es una cuestión de <strong>lealtad</strong>: solo se rinde ante uno.</p>',r:'Daniel 3:18'},
+    {orig:'שְׁבַח',t:'Shebach',l:'Alabar, glorificar, ensalzar',b:'<p>Tras ser restaurado, Nabucodonosor declara que alabó y glorificó al que vive para siempre. Un rey pagano termina reconociendo al <strong>Rey de reyes</strong>.</p>',r:'Daniel 4:34'}]},
+  {k:'Griego koiné',n:3,lang:'el',note:'Lengua del Nuevo Testamento. Aquí la adoración se expresa como postura, servicio y reverencia.',items:[
+    {orig:'προσκυνέω',t:'Proskuneo',l:'Postrarse, “besar hacia”',b:'<p>Inclinarse en señal de profunda reverencia, como quien besa la mano de un rey. Es la palabra que Jesús usa con la samaritana: los verdaderos adoradores adorarán <strong>en espíritu y en verdad</strong>.</p>',r:'Juan 4:23-24'},
+    {orig:'λατρεύω',t:'Latreuo',l:'Servir, rendir culto',b:'<p>Describe el servicio sacerdotal. Pablo llama a la entrega del cuerpo nuestro <strong>culto racional</strong> (latreia): la adoración se demuestra en servicio.</p>',r:'Romanos 12:1'},
+    {orig:'σέβομαι',t:'Sebomai',l:'Reverenciar, temor piadoso',b:'<p>Describe a quienes honraban a Dios con devoción, como Lidia, “que adoraba a Dios”. Jesús advierte que es vano honrarle con los labios si el corazón está lejos (Mateo 15:8-9).</p>',r:'Hechos 16:14'}]},
+  {k:'Latín eclesiástico',n:1,lang:'la',note:'Lengua de la Vulgata y de la tradición de la Iglesia; de ella proviene nuestra palabra española.',items:[
+    {orig:'adorare',t:'Adorare',l:'Dirigir la palabra hacia',b:'<p>De <em>ad</em> (hacia) y <em>orare</em> (hablar, orar): dirigir la palabra y el corazón hacia Dios. Es la raíz del español <strong>“adorar”</strong>. La Vulgata traduce Juan 4:24: <em>in spiritu et veritate oportet adorare</em>.</p>',r:'Juan 4:24'}]}
+];
+
+const DIMS=[
+  {k:'Celestial',t:'Adoración celestial',i:'star',c:'#9fb6ff',d:'Modelo de adoración marcado por orden, gloria, cánticos y postración.',r:'Apocalipsis 4:8-11',
+   x:'Los seres vivientes no cesan día y noche de decir “Santo, santo, santo”, y los veinticuatro ancianos se postran y echan sus coronas. Es el patrón: lo que hacemos en la tierra aspira a reflejar lo que ya sucede en el Cielo.'},
+  {k:'Profética',t:'Adoración profética',i:'flame',c:'#f0a061',d:'Flujo espontáneo que responde a lo que Dios está hablando en el presente.',r:'',
+   x:'Requiere sensibilidad, preparación y sujeción. Lo espontáneo no es improvisación desordenada: es obediencia en tiempo real a lo que el Espíritu está diciendo a la congregación.'},
+  {k:'Litúrgica',t:'Adoración litúrgica',i:'dove',c:'#e6dccb',d:'Orden establecido que une a la congregación en un mismo sentir.',r:'',
+   x:'La estructura no apaga al Espíritu; le da cauce. Un orden compartido permite que toda la congregación avance unida, cante lo mismo y responda en un mismo sentir.'},
+  {k:'Espíritu y verdad',t:'Adoración en espíritu y verdad',i:'heart',c:'#ef8c97',d:'Adoración que nace del espíritu y está fundamentada en la Palabra.',r:'Juan 4:23-24',
+   x:'Espíritu sin verdad se vuelve emocionalismo; verdad sin espíritu se vuelve religiosidad. El Padre busca adoradores que unan ambas: un corazón encendido y una mente anclada en la Palabra.'},
+  {k:'Sacrificio',t:'Adoración en sacrificio',i:'drop',c:'#d0505d',d:'Adorar incluso en medio del dolor, crisis o desierto.',r:'Job 1:20-21',
+   x:'Job lo perdió todo, se postró en tierra y adoró: “Jehová dio, y Jehová quitó; sea el nombre de Jehová bendito”. La adoración más costosa es la que se ofrece cuando nada a nuestro alrededor parece motivarla.'}
+];
+
+const REASONS=[
+  {n:'01',t:'Identidad creacional',i:'person',m:'Fuimos diseñados para declarar las virtudes de Aquel que nos llamó.',r:['Isaías 43:21','1 Pedro 2:9'],
+   x:'Adorar no es una actividad más de la vida cristiana: es la razón por la que fuimos formados. Cuando adoramos, funcionamos según el diseño original.'},
+  {n:'02',t:'Naturaleza de Dios',i:'crown',m:'Dios es digno por Sus atributos.',r:'Apocalipsis 5:12',
+   x:'No adoramos solo por lo que Dios hace, sino por lo que Él es. El Cordero es digno de tomar el poder, las riquezas, la sabiduría, la fortaleza, la honra, la gloria y la alabanza.'},
+  {n:'03',t:'Legalidad espiritual',i:'scale',m:'Lo que adoramos gobierna nuestra vida.',r:'Mateo 4:10',
+   x:'Toda adoración otorga autoridad. Aquello a lo que rendimos el corazón —personas, posesiones, talentos o el propio yo— termina dirigiendo nuestras decisiones. Por eso Jesús respondió: “Al Señor tu Dios adorarás, y a Él solo servirás”.'},
+  {n:'04',t:'Mandato directo',i:'speak',m:'La adoración es un mandato que alcanza a toda la creación.',r:'Salmo 150:6',
+   x:'“Todo lo que respira alabe a JAH.” Si hay aliento, hay razón y mandato para adorar. No es opcional ni depende del talento.'}
+];
+
+const MOVES=[
+  {n:'Postración',h:'Kálah',i:'m_post',m:'Humillación, temor reverente y rendición total.',r:'2 Crónicas 7:3',
+   x:'Cuando descendió el fuego y la gloria de Jehová llenó la casa, todo el pueblo se postró rostro en tierra y adoró. La postración es la respuesta natural ante la gloria.',e:'Descender al suelo, inclinar el torso, quietud. Movimientos lentos que transmiten rendición.'},
+  {n:'Giro',h:'Karáv',i:'m_giro',m:'Celebración, libertad y expresión de gozo.',r:'2 Samuel 6:14',
+   x:'David danzaba con toda su fuerza delante de Jehová cuando el arca regresaba a Jerusalén. Girar expresa la libertad de quien ha sido liberado y celebra la presencia de Dios.',e:'Giros sobre el propio eje, vueltas con telas o banderas, en momentos de celebración.'},
+  {n:'Salto',h:'Dillúg',i:'m_salto',m:'Regocijo extremo y celebración.',r:'Salmo 18:29',
+   x:'“Con mi Dios asaltaré muros.” El salto expresa un gozo que no cabe en el cuerpo y la fe de quien sabe que, con Dios, ningún obstáculo es demasiado alto.',e:'Saltos en momentos de júbilo y victoria; siempre con técnica y cuidado de las articulaciones.'},
+  {n:'Marcha',h:'Tsalád',i:'m_marcha',m:'Avance, orden y expresión de guerra espiritual.',r:'Josué 6:3',
+   x:'Israel rodeó Jericó en marcha, con orden y obediencia, y los muros cayeron. La marcha declara que el pueblo de Dios avanza unido y bajo dirección.',e:'Pasos firmes y sincronizados, formaciones, desplazamientos en bloque.'},
+  {n:'Extensión de manos',h:'Tenufáh',i:'m_manos',m:'Ofrenda, ministración y bendición.',r:'Levítico 9:22',
+   x:'Aarón alzó sus manos hacia el pueblo y lo bendijo. La tenufáh era también la ofrenda mecida, presentada delante de Dios con movimiento: extender las manos es ofrecer y ministrar.',e:'Brazos extendidos hacia el cielo (ofrenda) o hacia la congregación (bendición).'},
+  {n:'Correr',h:'Rúts',i:'m_correr',m:'Urgencia, pasión y movimiento.',r:'Cantares 1:4',
+   x:'“Atráeme; en pos de ti correremos.” Correr expresa el anhelo del alma que busca a su Amado con urgencia y pasión.',e:'Desplazamientos rápidos por el espacio, entradas y salidas con intención.'}
+];
+
+const COLORS=[
+  {n:'Oro / Dorado',m:'Deidad, realeza, purificación y gloria.',r:'Éxodo 25:11',bg:'radial-gradient(circle at 32% 28%,#fff1c4,#d9ae55 48%,#8a6524)',t:'#2a1e08',glow:'rgba(217,174,85,.7)',tint:'rgba(217,174,85,.2)',
+   x:'En el tabernáculo, el arca, el propiciatorio y el candelero estaban cubiertos o hechos de oro puro: lo que estaba más cerca de la presencia de Dios. Habla de Su naturaleza divina y de una fe probada como el oro en el fuego (1 Pedro 1:7).'},
+  {n:'Plata',m:'Redención y pureza.',r:'Éxodo 30:16',bg:'radial-gradient(circle at 32% 28%,#ffffff,#c4c9cf 48%,#737a82)',t:'#1d2024',glow:'rgba(196,201,207,.6)',tint:'rgba(196,201,207,.16)',
+   x:'La plata era el precio del rescate de cada israelita y formaba las basas del tabernáculo. Habla de la redención: hemos sido comprados por precio. También de la Palabra purificada siete veces (Salmo 12:6).'},
+  {n:'Bronce',m:'Juicio, fuego purificador y resistencia.',r:'Apocalipsis 1:15',bg:'radial-gradient(circle at 32% 28%,#f2c08c,#ad6c3a 50%,#5a3518)',t:'#24140a',glow:'rgba(173,108,58,.7)',tint:'rgba(173,108,58,.2)',
+   x:'El altar del holocausto y la fuente estaban hechos de bronce: el lugar donde se juzgaba el pecado. Los pies de Cristo glorificado son semejantes al bronce bruñido, refulgente como en un horno.'},
+  {n:'Rojo / Carmesí',m:'Sangre del pacto y sacrificio.',r:'Hebreos 9:22',bg:'radial-gradient(circle at 32% 28%,#ff6a6a,#b3192a 50%,#5c0812)',t:'#fff',glow:'rgba(179,25,42,.75)',tint:'rgba(179,25,42,.2)',
+   x:'Sin derramamiento de sangre no hay remisión. Recuerda el cordero pascual, la cruz y el nuevo pacto. Es propio de tiempos de Santa Cena, redención y cobertura.'},
+  {n:'Azul claro / Celeste',m:'Lo celestial y visitación del Espíritu Santo.',r:'Éxodo 24:10',bg:'radial-gradient(circle at 32% 28%,#e6f6ff,#8cc7ee 50%,#3f84b6)',t:'#0b2233',glow:'rgba(140,199,238,.7)',tint:'rgba(140,199,238,.16)',
+   x:'Los ancianos de Israel vieron bajo los pies de Dios algo semejante a un embaldosado de zafiro, como el cielo cuando está sereno. Habla del cielo abierto y de la visitación del Espíritu Santo.'},
+  {n:'Azul real / Oscuro',m:'Autoridad y sacerdocio.',r:'Éxodo 28:31',bg:'radial-gradient(circle at 32% 28%,#6f8fe8,#22409a 50%,#0c1a4a)',t:'#fff',glow:'rgba(34,64,154,.8)',tint:'rgba(60,90,190,.2)',
+   x:'El manto del efod del sumo sacerdote era todo de azul. Representa la autoridad delegada y el llamado sacerdotal a ministrar delante de Dios a favor del pueblo.'},
+  {n:'Púrpura / Morado',m:'Realeza, majestad y gobierno.',r:'Juan 19:2-3',bg:'radial-gradient(circle at 32% 28%,#b98ae6,#5f2a8c 50%,#2a0f45)',t:'#fff',glow:'rgba(95,42,140,.8)',tint:'rgba(125,70,180,.22)',
+   x:'Era el color de los reyes por su alto costo. A Jesús le pusieron un manto de púrpura burlándose de Él como “Rey de los judíos”, sin saber que proclamaban una verdad eterna: Él es Rey de reyes.'},
+  {n:'Blanco',m:'Santidad y justicia.',r:'Isaías 1:18',bg:'radial-gradient(circle at 32% 28%,#ffffff,#f1ece2 55%,#bdb5a6)',t:'#26221b',glow:'rgba(255,255,255,.45)',tint:'rgba(255,255,255,.12)',
+   x:'“Si vuestros pecados fueren como la grana, como la nieve serán emblanquecidos.” Los redimidos visten ropas blancas (Apocalipsis 7:14). Habla de santidad, justicia y una conciencia limpia.'},
+  {n:'Verde',m:'Vida, esperanza y nuevos comienzos.',r:'Salmo 1:3',bg:'radial-gradient(circle at 32% 28%,#8fe0a8,#2f8a57 50%,#11432a)',t:'#fff',glow:'rgba(47,138,87,.75)',tint:'rgba(47,138,87,.2)',
+   x:'El justo es como árbol plantado junto a corrientes de aguas, cuya hoja no cae. Representa vida que brota, crecimiento, esperanza y temporadas nuevas.'},
+  {n:'Naranja / Fuego',m:'Fuego del Espíritu Santo y avivamiento.',r:'Hechos 2:3',bg:'radial-gradient(circle at 32% 28%,#ffd08a,#ea7a2a 50%,#8c3109)',t:'#2b1003',glow:'rgba(234,122,42,.75)',tint:'rgba(234,122,42,.2)',
+   x:'En Pentecostés aparecieron lenguas repartidas, como de fuego, sobre cada uno. Habla del fuego que purifica, enciende y despierta: avivamiento.'},
+  {n:'Vino / Uva',m:'Gozo, nueva unción y pacto renovado.',r:['Salmo 104:15','Lucas 22:20'],bg:'radial-gradient(circle at 32% 28%,#d0587e,#7a1838 50%,#33061a)',t:'#fff',glow:'rgba(122,24,56,.8)',tint:'rgba(150,40,80,.22)',
+   x:'El vino que alegra el corazón y la copa del nuevo pacto. En Caná, Jesús guardó el mejor vino para el final (Juan 2:10): gozo, nueva unción y pacto renovado.'}
+];
+
+const ERRORS=[
+  {n:'01',t:'Desconexión técnica y espiritual',l:'Ensayar por separado y nunca orar juntos.',
+   b:'<p>Músicos, cantores y danzarines preparan su parte con excelencia, pero nunca buscan juntos a Dios. El resultado es <strong>precisión sin unción</strong>: todo suena y se ve bien, pero no hay vida.</p>',a:'Incluir oración y lectura compartida en cada ensayo, y ensayar juntos —música y danza— las piezas principales.'},
+  {n:'02',t:'Protagonismo y antropocentrismo',l:'Convertir el altar en una plataforma de entretenimiento.',
+   b:'<p>Cuando la atención se centra en la voz, el talento, el vestuario o la coreografía, el ser humano ocupa el lugar que solo le pertenece a Dios.</p>',a:'Antes de ministrar, preguntarse: ¿esto lo señala a Él o a mí? “Es necesario que Él crezca, pero que yo mengüe” (Juan 3:30).'},
+  {n:'03',t:'Falta de discernimiento atmosférico',l:'No reconocer los tiempos y momentos espirituales.',
+   b:'<p>Hay tiempo de endechar y tiempo de bailar (Eclesiastés 3:4). Forzar un canto de júbilo cuando Dios está trayendo quebranto —o al revés— interrumpe lo que el Espíritu está haciendo.</p>',a:'Mantener los ojos en la dirección y el oído en el Espíritu; tener preparadas alternativas para cada momento del servicio.'},
+  {n:'04',t:'Uso incorrecto de elementos',l:'Utilizar banderas, mantos o instrumentos sin comprender su significado.',
+   b:'<p>Cada elemento comunica un mensaje: su color, su forma y el momento en que se usa. Usarlo solo por estética vacía el símbolo de su propósito y puede transmitir algo contrario a lo que Dios está haciendo.</p>',a:'Estudiar el significado antes de incorporar un elemento y usarlo con intención, en el momento adecuado.'},
+  {n:'05',t:'Falta de sometimiento a la autoridad',l:'Ministrar de manera independiente sin caminar bajo dirección y orden.',
+   b:'<p>El orden bíblico incluye dirección: David organizó a los cantores y músicos bajo la dirección de Asaf, Hemán y Jedutún (1 Crónicas 25:1-6). La unción fluye a través del orden, no a pesar de él.</p>',a:'Honrar la cobertura pastoral y la dirección del ministerio; no improvisar cambios sin consultar.'}
+];
+
+const WEAR_D=[
+  {t:'Modestia',i:'shield',l:'Que la atención se dirija a Dios.',b:'<p>El vestuario no debe marcar, transparentar ni exponer el cuerpo. Se ministra con ropa decorosa, con pudor y modestia (1 Timoteo 2:9).</p>'},
+  {t:'Funcionalidad',i:'dance',l:'Libertad de movimiento.',b:'<p>Debe permitir giros, saltos y postración sin necesidad de ajustar la ropa a cada momento. Si hay que sostener la prenda, distrae a quien danza y a quien observa.</p>'},
+  {t:'Cobertura',i:'robe',l:'Capas que protegen en cada movimiento.',b:'<p>Usar licra o pantalón debajo de la falda y una prenda interior bajo la túnica. Hombros, escote y abdomen deben permanecer cubiertos también al levantar los brazos o inclinarse.</p>'},
+  {t:'Telas adecuadas',i:'eye',l:'Ni transparentes ni ajustadas.',b:'<p>Preferir telas con buena caída, opacas y que no se peguen al cuerpo. Probarlas a contraluz y bajo las luces del lugar donde se ministra.</p>'},
+  {t:'Calzado apropiado',i:'fp',l:'Seguridad y uniformidad.',b:'<p>Zapatillas de danza, media punta o calzado suave y antideslizante, según lo establezca el ministerio. Previene lesiones y mantiene la unidad visual.</p>'},
+  {t:'Cabello recogido',i:'person',l:'El rostro despejado.',b:'<p>Evita que el cabello cubra el rostro o distraiga durante los giros. Un peinado uniforme y firme refleja orden y preparación.</p>'}
+];
+const WEAR_M=[
+  {t:'Evitar distracciones visuales',i:'eye',l:'Nada que compita con el mensaje.',b:'<p>Evitar accesorios llamativos, estampados, logotipos, brillos excesivos o prendas que llamen la atención sobre la persona y no sobre Dios.</p>'},
+  {t:'Mantener consistencia de colores',i:'link',l:'Una paleta acordada.',b:'<p>El equipo define con anticipación los colores según la temática o el tiempo del servicio, en armonía con la danza cuando ministran juntos.</p>'},
+  {t:'Vestir con formalidad y respeto',i:'crown',l:'Como quien se presenta ante el Rey.',b:'<p>Ropa limpia, planchada y adecuada al lugar. La forma de vestir comunica cuánto valoramos el servicio que realizamos.</p>'},
+  {t:'Reflejar unidad ministerial',i:'people',l:'Un solo cuerpo.',b:'<p>El vestuario comunica que somos un equipo: nadie busca destacarse por encima de los demás. La unidad visual es reflejo de la unidad espiritual.</p>'}
+];
+const GARMENTS=[
+  {t:'Túnica',mat:'Lino blanco',i:'g_tunica',m:'Representa pureza y acciones justas.',r:'Apocalipsis 19:8',x:'El lino fino, limpio y resplandeciente son las acciones justas de los santos. La túnica recuerda que lo que vestimos por fuera debe corresponder a una vida limpia por dentro.'},
+  {t:'Cinturón / Fajón',mat:'Ceñido',i:'g_cinto',m:'Representa preparación, verdad, justicia y dominio propio.',r:'Efesios 6:14',x:'Estar ceñidos con la verdad es estar listos para servir y para la batalla. El cinturón ordena la prenda y simboliza una vida que se sujeta a la verdad y al dominio propio.'},
+  {t:'Efodes y mantos',mat:'Cobertura',i:'g_manto',m:'Representan cobertura, unción y autoridad ministerial.',r:'2 Reyes 2:13',x:'Eliseo alzó el manto que había caído de Elías y continuó su ministerio. El manto representa una unción y una autoridad que se reciben, no que se toman; por eso se usan con reverencia y bajo dirección.'}
+];
+
+/* ================= RENDER ================= */
+$('#purpose').innerHTML=PURPOSE.map((p,i)=>acc({num:p.n,title:p.t,lead:p.l,body:p.b,ref:p.r,d:i*.06})).join('');
+
+$('#hebRail').innerHTML=HEB.map((w,i)=>
+  '<button class="heb'+(i===0?' lead':'')+'" data-heb="'+i+'" aria-label="'+w.t+', '+w.m+'. Ampliar">'+
+  '<span class="top"><em>'+(w.tag||String(i).padStart(2,'0'))+'</em><span>'+w.r+'</span></span>'+
+  '<span class="script" lang="he">'+w.h+'</span><span class="tr">'+w.t.toUpperCase()+'</span><span class="mean">'+w.m+'</span>'+
+  '<span class="desc">'+w.d+'</span><span class="foot"><span class="ref">'+ico('book')+w.r+'</span><span class="open">Ampliar'+ico('plus')+'</span></span></button>').join('');
+
+$('#langTabs').innerHTML=LANGS.map((L,i)=>'<button class="tab" role="tab" id="lt'+i+'" aria-controls="lp'+i+'" aria-selected="'+(i===0)+'"'+(i?' tabindex="-1"':'')+'>'+L.k+' <small>'+L.n+'</small></button>').join('');
+$('#langPanels').innerHTML=LANGS.map((L,i)=>'<div role="tabpanel" id="lp'+i+'" aria-labelledby="lt'+i+'"'+(i?' hidden':'')+'><p class="lang-note">'+L.note+'</p><div class="stack">'+
+  L.items.map(it=>acc({title:it.t,orig:it.orig,lang:L.lang,lead:it.l,body:it.b,ref:it.r})).join('')+'</div></div>').join('');
+
+$('#dimTabs').innerHTML=DIMS.map((D,i)=>'<button class="dim" role="tab" id="dt'+i+'" aria-controls="dp'+i+'" aria-selected="'+(i===0)+'"'+(i?' tabindex="-1"':'')+' style="--dc:'+D.c+'">'+ico(D.i)+'<span>'+D.k+'</span></button>').join('');
+$('#dimPanels').innerHTML=DIMS.map((D,i)=>'<div role="tabpanel" id="dp'+i+'" aria-labelledby="dt'+i+'" class="card dim-panel" style="--dc:'+D.c+'"'+(i?' hidden':'')+'>'+
+  '<div class="badge">'+ico(D.i)+'</div><h4>'+D.t+'</h4><p class="d">'+D.d+'</p><p class="x">'+D.x+'</p>'+(D.r?refs(D.r):'')+'</div>').join('');
+
+$('#reasons').innerHTML=REASONS.map((R,i)=>
+  '<article class="card num-card rv" style="--d:'+(i*.06)+'s"><span class="big" aria-hidden="true">'+R.n+'</span><h4>'+R.n+' — '+R.t+'</h4><p class="main">'+R.m+'</p>'+
+  '<button class="more-btn" aria-expanded="false" aria-controls="rs'+i+'" data-more data-open="Leer más" data-close="Leer menos"><span>Leer más</span><span class="chev">'+ico('chev')+'</span></button>'+
+  '<div class="collapse" id="rs'+i+'" inert><div><p class="note">'+R.x+'</p>'+refs(R.r)+'</div></div></article>').join('');
+
+$('#moves').innerHTML=MOVES.map((M,i)=>
+  '<button class="mv rv" style="--d:'+(i%2*.06)+'s" data-mv="'+i+'" aria-label="'+M.n+' ('+M.h+'): '+M.m+' Ampliar">'+
+  '<span class="plus">'+ico('plus')+'</span><span class="fig">'+ico(M.i)+'</span><span class="nm">'+M.n+'</span><span class="hb">'+M.h+'</span><span class="mn">'+M.m+'</span><span class="rf">'+M.r+'</span></button>').join('');
+
+$('#spectrum').innerHTML=COLORS.map(C=>'<span style="background:'+C.bg+'"></span>').join('');
+$('#colors').innerHTML=COLORS.map((C,i)=>
+  '<button class="clr rv" data-clr="'+i+'" style="--d:'+(i%3*.05)+'s;--glow:'+C.glow+'" aria-label="'+C.n+': '+C.m+' Ampliar">'+
+  '<span class="sw" style="background:'+C.bg+'"></span><span class="ct"><span class="cn">'+C.n+'</span><span class="cm">'+C.m+'</span><span class="cr">'+[].concat(C.r).join(' · ')+'</span></span><span class="chev">'+ico('chev')+'</span></button>').join('');
+
+$('#errors').innerHTML=ERRORS.map((E,i)=>acc({num:E.n,title:E.t,lead:E.l,body:E.b+applyBox('Cómo evitarlo',E.a),d:i*.05})).join('');
+
+$('#wearDanza').innerHTML=WEAR_D.map(W=>acc({icon:W.i,title:W.t,lead:W.l,body:W.b})).join('');
+$('#wearMus').innerHTML=WEAR_M.map(W=>acc({icon:W.i,title:W.t,lead:W.l,body:W.b})).join('');
+
+$('#garments').innerHTML=GARMENTS.map((G,i)=>
+  '<article class="card garm rv" style="--d:'+(i*.06)+'s"><div class="garm-top"><span class="fig">'+ico(G.i)+'</span><div><p class="mat">'+G.mat+'</p><h4>'+G.t+'</h4></div></div>'+
+  '<p>'+G.m+'</p>'+
+  '<button class="more-btn" aria-expanded="false" aria-controls="gm'+i+'" data-more data-open="Ver significado" data-close="Ocultar"><span>Ver significado</span><span class="chev">'+ico('chev')+'</span></button>'+
+  '<div class="collapse" id="gm'+i+'" inert><div><p class="note">'+G.x+'</p>'+refs(G.r)+'</div></div></article>').join('');
+
+hydrateIcons();
+linkify($('main'));
+
+/* ---------- Chapters & TOC ---------- */
+const chapters=$$('.chapter');
+const total=chapters.length;
+$('#tbTot').textContent=String(total).padStart(2,'0');
+$$('[data-toc]').forEach(box=>{
+  const part=box.closest('.part');
+  box.innerHTML=$$('.chapter',part).map(c=>'<button class="rv" data-jump="'+c.id+'"><b>'+String(chapters.indexOf(c)+1).padStart(2,'0')+'</b><span>'+c.dataset.title+'</span>'+ico('arrowR')+'</button>').join('');
+});
+
+/* ---------- Interactions ---------- */
+function setOpen(btn,panel,open){
+  btn.setAttribute('aria-expanded',open);
+  panel.inert=!open;
+}
+document.addEventListener('click',e=>{
+  const v=e.target.closest('[data-ref]');
+  if(v){toggleVerse(v);return;}
+  const a=e.target.closest('.acc-btn');
+  if(a){const box=a.parentElement,open=!box.classList.contains('open');box.classList.toggle('open',open);setOpen(a,document.getElementById(a.getAttribute('aria-controls')),open);return;}
+  const m=e.target.closest('[data-more]');
+  if(m){const p=document.getElementById(m.getAttribute('aria-controls')),open=m.getAttribute('aria-expanded')!=='true';p.classList.toggle('open',open);setOpen(m,p,open);m.firstElementChild.textContent=open?m.dataset.close:m.dataset.open;return;}
+  const j=e.target.closest('[data-jump]');
+  if(j){go(j.dataset.jump);return;}
+  const h=e.target.closest('[data-heb]');
+  if(h){openHeb(+h.dataset.heb,h);return;}
+  const mv=e.target.closest('[data-mv]');
+  if(mv){openMove(+mv.dataset.mv,mv);return;}
+  const c=e.target.closest('[data-clr]');
+  if(c){openColor(+c.dataset.clr,c);return;}
+});
+function go(id){
+  const el=document.getElementById(id);if(!el)return;
+  el.scrollIntoView({behavior,block:'start'});
+}
+
+/* Tabs */
+function tabs(list,onChange){
+  const ts=$$('[role="tab"]',list);
+  function sel(i,focus){
+    ts.forEach((t,k)=>{const on=k===i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;const p=document.getElementById(t.getAttribute('aria-controls'));p.hidden=!on;if(on&&!reduce){p.classList.remove('fade');void p.offsetWidth;p.classList.add('fade');}});
+    if(focus)ts[i].focus();
+    if(list.scrollWidth>list.clientWidth){const t=ts[i];list.scrollTo({left:t.offsetLeft-list.clientWidth/2+t.offsetWidth/2,behavior});}
+    onChange&&onChange(i);
+  }
+  ts.forEach((t,i)=>{
+    t.addEventListener('click',()=>sel(i));
+    t.addEventListener('keydown',e=>{let k=null;if(e.key==='ArrowRight')k=(i+1)%ts.length;else if(e.key==='ArrowLeft')k=(i-1+ts.length)%ts.length;else if(e.key==='Home')k=0;else if(e.key==='End')k=ts.length-1;if(k!==null){e.preventDefault();sel(k,true);}});
+  });
+}
+tabs($('#langTabs'));tabs($('#dimTabs'));tabs($('#wearTabs'));
+
+/* Carousel */
+$$('.rail-ctl').forEach(ctl=>{
+  const rail=document.getElementById(ctl.dataset.ctl),items=rail.children,n=items.length;
+  const dots=$('.rail-dots',ctl);dots.innerHTML=Array.from({length:n},()=>'<i></i>').join('');
+  const [prev,next]=$$('.icon-btn',ctl),count=$('.rail-count',ctl);
+  const step=()=>items[0].offsetWidth+parseFloat(getComputedStyle(rail).columnGap||12);
+  function upd(){
+    const max=rail.scrollWidth-rail.clientWidth;
+    let i=Math.round(rail.scrollLeft/step());
+    if(rail.scrollLeft>=max-4)i=n-1;
+    i=Math.max(0,Math.min(n-1,i));
+    count.innerHTML='<b>'+String(i+1).padStart(2,'0')+'</b> / '+String(n).padStart(2,'0');
+    $$('i',dots).forEach((d,k)=>d.classList.toggle('on',k===i));
+    prev.disabled=rail.scrollLeft<=4;next.disabled=rail.scrollLeft>=max-4;
+  }
+  let raf;rail.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(upd);},{passive:true});
+  ctl.addEventListener('click',e=>{const b=e.target.closest('[data-dir]');if(b)rail.scrollBy({left:step()*+b.dataset.dir,behavior});});
+  rail.addEventListener('keydown',e=>{if(e.target!==rail)return;if(e.key==='ArrowRight'){e.preventDefault();rail.scrollBy({left:step(),behavior});}if(e.key==='ArrowLeft'){e.preventDefault();rail.scrollBy({left:-step(),behavior});}});
+  window.addEventListener('resize',upd);upd();
+});
+
+/* ---------- Bottom sheet ---------- */
+const sheet=$('#sheet'),bg=$('#sheetBg'),body=$('#sheetBody');
+let lastFocus=null,closing=null;
+function openSheet(html,accent,from){
+  clearTimeout(closing);
+  lastFocus=from||document.activeElement;
+  body.innerHTML=html;body.scrollTop=0;linkify(body);
+  sheet.style.setProperty('--accent',accent||'var(--gold)');
+  sheet.hidden=false;bg.hidden=false;sheet.style.transform='';
+  void sheet.offsetWidth;
+  sheet.classList.add('show');bg.classList.add('show');
+  document.body.classList.add('lock');
+  $('main').inert=true;$('.dock').inert=true;$('.topbar').inert=true;
+  setTimeout(()=>$('#sheetX').focus({preventScroll:true}),60);
+}
+function closeSheet(){
+  if(sheet.hidden)return;
+  sheet.classList.remove('show');bg.classList.remove('show');sheet.style.transform='';
+  document.body.classList.remove('lock');
+  $('main').inert=false;$('.dock').inert=false;$('.topbar').inert=false;
+  closing=setTimeout(()=>{sheet.hidden=true;bg.hidden=true;},reduce?0:420);
+  if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
+}
+$('#sheetX').addEventListener('click',closeSheet);
+bg.addEventListener('click',closeSheet);
+document.addEventListener('keydown',e=>{
+  if(sheet.hidden)return;
+  if(e.key==='Escape'){closeSheet();return;}
+  if(e.key==='Tab'){
+    const f=$$('button,[href],[tabindex]:not([tabindex="-1"])',sheet).filter(x=>!x.disabled&&x.offsetParent!==null);
+    if(!f.length)return;const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+/* drag to dismiss */
+(function(){
+  let y0=null,dy=0;
+  const start=e=>{y0=e.clientY;dy=0;sheet.classList.add('drag');};
+  const move=e=>{if(y0===null)return;dy=Math.max(0,e.clientY-y0);sheet.style.transform='translateY('+dy+'px)';};
+  const end=()=>{if(y0===null)return;sheet.classList.remove('drag');y0=null;if(dy>90)closeSheet();else sheet.style.transform='';};
+  const grip=$('#sheetGrip');
+  grip.addEventListener('pointerdown',e=>{grip.setPointerCapture(e.pointerId);start(e);});
+  grip.addEventListener('pointermove',move);grip.addEventListener('pointerup',end);grip.addEventListener('pointercancel',end);
+  // also allow pulling down from the content when it is scrolled to top (touch)
+  let ty=null,tdy=0;
+  body.addEventListener('touchstart',e=>{ty=body.scrollTop<=0?e.touches[0].clientY:null;tdy=0;},{passive:true});
+  body.addEventListener('touchmove',e=>{if(ty===null)return;tdy=e.touches[0].clientY-ty;if(tdy>0){sheet.classList.add('drag');sheet.style.transform='translateY('+tdy+'px)';}else{ty=null;sheet.classList.remove('drag');sheet.style.transform='';}},{passive:true});
+  body.addEventListener('touchend',()=>{if(ty===null)return;sheet.classList.remove('drag');ty=null;if(tdy>110)closeSheet();else sheet.style.transform='';});
+})();
+
+function openHeb(i,from){
+  const w=HEB[i];
+  openSheet('<p class="sh-kicker">Expresión hebrea · '+(w.tag||String(i).padStart(2,'0')+' de 07')+'</p>'+
+    '<p class="sh-script" lang="he" dir="rtl">'+w.h+'</p><h2 id="sheetTitle">'+w.t+'</h2><p class="sh-sub">'+w.m+'</p>'+
+    '<p class="sh-lead">'+w.d+'</p><div class="sh-body">'+w.x+'</div>'+applyBox('Cómo se expresa',w.e)+refs(w.r),'var(--gold)',from);
+}
+function openMove(i,from){
+  const M=MOVES[i];
+  openSheet('<div class="sh-fig">'+ico(M.i)+'</div><p class="sh-kicker">Movimiento de la danza · '+String(i+1).padStart(2,'0')+' de 06</p>'+
+    '<h2 id="sheetTitle">'+M.n+'</h2><p class="sh-sub">'+M.h+'</p><p class="sh-lead">'+M.m+'</p>'+
+    '<div class="sh-body"><p>'+M.x+'</p></div>'+applyBox('En el altar',M.e)+refs(M.r),'var(--violet)',from);
+}
+const spec=$$('#spectrum span');
+function openColor(i,from){
+  const C=COLORS[i];
+  $('#c8').style.setProperty('--tint',C.tint);
+  spec.forEach((s,k)=>s.classList.toggle('on',k===i));
+  openSheet('<div class="sh-hero" style="background:'+C.bg.replace('circle at 32% 28%','circle at 25% 20%')+';color:'+C.t+'"><span class="sh-hex">Cromática del altar</span></div>'+
+    '<h2 id="sheetTitle">'+C.n+'</h2><p class="sh-lead" style="margin-top:8px">'+C.m+'</p><div class="sh-body"><p>'+C.x+'</p></div>'+refs(C.r),'var(--gold)',from);
+}
+function openIndex(from){
+  const groups=[['Sección I · Alabanza y Adoración','alabanza','var(--gold)'],['Sección II · Danza','danza','var(--violet)'],['Sección III · Vestuario','vestuario','var(--bronze)'],['Cierre','fin','var(--gold)']];
+  let html='<p class="sh-kicker">Índice</p><h2 id="sheetTitle">Capítulos</h2>';
+  groups.forEach(([label,area,c])=>{
+    const cs=chapters.filter(ch=>ch.closest('.part').dataset.area===area);
+    html+='<p class="sh-group">'+label+'</p><div class="sh-list">'+cs.map(ch=>'<button data-idx="'+ch.id+'" style="--c:'+c+'"><b>'+String(chapters.indexOf(ch)+1).padStart(2,'0')+'</b><span>'+ch.dataset.title+'</span><small>'+ch.dataset.stage+'</small></button>').join('')+'</div>';
+  });
+  openSheet(html,'var(--gold)',from);
+}
+$('#idxBtn').addEventListener('click',e=>openIndex(e.currentTarget));
+body.addEventListener('click',e=>{const b=e.target.closest('[data-idx]');if(!b)return;const id=b.dataset.idx;lastFocus=null;closeSheet();setTimeout(()=>go(id),reduce?0:180);});
+
+/* ---------- Navigation chrome ---------- */
+const cover=$('#inicio'),fill=$('#tbFill'),bar=$('#tbBar');
+const segBtns=$$('#seg button'),ind=$('#segInd');
+const areaColor={alabanza:'var(--gold)',danza:'var(--violet)',vestuario:'var(--bronze)'};
+let curArea=null;
+function placeInd(){
+  const b=segBtns.find(x=>x.dataset.go===curArea);
+  if(!b){ind.style.opacity=0;segBtns.forEach(x=>x.setAttribute('aria-current','false'));return;}
+  ind.style.opacity=1;ind.style.width=b.offsetWidth+'px';ind.style.transform='translateX('+b.offsetLeft+'px)';ind.style.setProperty('--ind',areaColor[curArea]);
+  segBtns.forEach(x=>x.setAttribute('aria-current',x===b?'true':'false'));
+}
+segBtns.forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+$('#startBtn').addEventListener('click',()=>go('intro'));
+$('#topBtn').addEventListener('click',()=>{window.scrollTo({top:0,behavior});});
+
+let ticking=false;
+function onScroll(){
+  if(ticking)return;ticking=true;
+  requestAnimationFrame(()=>{
+    const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    const p=h>0?Math.min(1,y/h):0;
+    fill.style.transform='scaleX('+p+')';bar.setAttribute('aria-valuenow',Math.round(p*100));
+    document.body.classList.toggle('chrome',y>cover.offsetHeight-innerHeight*.4);
+    // current chapter & area
+    const line=innerHeight*.42;let cur=null;
+    for(const c of chapters){if(c.getBoundingClientRect().top<=line)cur=c;else break;}
+    if(cur){
+      $('#tbNum').textContent=String(chapters.indexOf(cur)+1).padStart(2,'0');
+      $('#tbTitle').textContent=cur.dataset.title;$('#tbStage').textContent=cur.dataset.stage;
+    }else{$('#tbNum').textContent='00';$('#tbTitle').textContent='Antes de empezar';$('#tbStage').textContent='Inicio';}
+    let area=null;
+    for(const pt of $$('.part')){const r=pt.getBoundingClientRect();if(r.top<=line&&r.bottom>line){area=pt.dataset.area;break;}}
+    const topbar=$('#topbar');
+    topbar.style.setProperty('--accent',areaColor[area]||'var(--gold)');
+    if(area!==curArea){curArea=area;placeInd();}
+    ticking=false;
+  });
+}
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',()=>{placeInd();onScroll();});
+onScroll();
+
+/* ---------- Reveal ---------- */
+const rvs=$$('.rv');
+if(reduce||!('IntersectionObserver' in window)){rvs.forEach(el=>el.classList.add('in'));}
+else{
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  rvs.forEach(el=>io.observe(el));
+}
+})();
+</script>
+</body>
+</html>
